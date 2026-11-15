@@ -1,7 +1,6 @@
 import { contact } from '@/content/social';
 import { Lines } from '@/components/ui/Lines';
 import { Arrow } from '@/components/ui/Arrow';
-import { Todo } from '@/components/ui/Todo';
 import { Img } from '@/components/ui/Img';
 import { CopyEmail } from './CopyEmail';
 
@@ -46,7 +45,6 @@ export function Connect() {
                   </li>
                 ))}
               </ul>
-              <Todo items={contact.todo} className="mt-8" />
             </div>
           </div>
 

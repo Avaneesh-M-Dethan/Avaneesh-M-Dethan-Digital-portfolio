@@ -4,10 +4,9 @@ export const contact = {
   email: 'avaneeshmdethan@gmail.com',
   /** Leave a URL empty to hide that link. */
   links: [
-    { label: 'LinkedIn', href: '' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/avaneesh-m-dethan-b5879b2b6/' },
     { label: 'Quoin', href: 'https://quoin-tau.vercel.app' },
   ],
-  todo: ['Your LinkedIn profile URL (content/social.ts)'],
   footer: 'Thiruvananthapuram · Bengaluru',
   photo: {
     key: 'personal/portrait-lets-talk',

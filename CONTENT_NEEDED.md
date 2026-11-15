@@ -26,7 +26,6 @@ The current Quoin code on your laptop has already removed all of these. Redeploy
 | Your second Best Delegate conference (SarvoMUN 2K24 is shown from the trophy photo) | Leadership → MUN | `content/leadership.ts` |
 | Committees and countries you represented at MUN | Leadership → MUN | `content/leadership.ts` |
 | Full name of GLC and your role in it (only if you want it shown) | Leadership → Placement committee | `content/leadership.ts` |
-| Your LinkedIn URL | Connect | `content/social.ts` |
 | The final website address, once you have one | SEO and share previews | `content/profile.ts` (`siteUrl`) |
 | Confirm Eternal Limited belongs to Basics of Accounting (taken from your timetable) | Academic → ACC folio | `content/academic.ts` |
 | Full course names for Mathematics and Excel and Power BI, if they differ | Academic → Curriculum | `content/academic.ts` |
