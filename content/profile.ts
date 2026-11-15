@@ -18,7 +18,7 @@ export const profile = {
   siteTitle: 'Avaneesh M Dethan | Student, builder, curious by nature',
   siteDescription:
     'The portfolio of Avaneesh M Dethan, a BBA student at TAPMI Bengaluru. Leadership, the things he has built, academic projects and what he is exploring next.',
-  siteUrl: 'https://avaneesh-portfolio.netlify.app',
+  siteUrl: 'https://avaneesh-m-dethan.vercel.app',
   location: 'Bengaluru, India',
 };
 
