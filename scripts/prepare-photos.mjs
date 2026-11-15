@@ -41,3 +41,6 @@ await save(sharp(path.join(src, '4.png')).jpeg({ quality: 92 }), 'personal/best-
 await save(sharp(path.join(src, '5.png')).jpeg({ quality: 92 }), 'personal/portrait-lets-talk.jpg');
 // Trim a near-black strip (and a stray speck) along the bottom edge.
 await save(sharp(path.join(src, '6.png')).extract({ left: 0, top: 0, width: 608, height: 678 }).jpeg({ quality: 92 }), 'personal/speaking-mun.jpg');
+
+// 7. Quoin live hero (supplied screenshot): trim the browser bar (8px) and scrollbar (10px).
+await save(sharp(path.join(src, '7.png')).extract({ left: 0, top: 8, width: 1900, height: 865 }), 'projects/quoin/quoin-live-hero.png');

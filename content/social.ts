@@ -1,6 +1,6 @@
 export const contact = {
   heading: { lead: 'Have something', accent: 'interesting in mind?' },
-  body: 'Ideas, projects, opportunities or a good question. My inbox is open.',
+  body: 'Got an idea, a project, an opportunity or just a good question? Send it my way.',
   email: 'avaneeshmdethan@gmail.com',
   /** Leave a URL empty to hide that link. */
   links: [

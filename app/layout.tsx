@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Cormorant_Garamond, Manrope, IBM_Plex_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { profile } from '@/content/profile';
 import { contact } from '@/content/social';
@@ -9,15 +9,36 @@ import { ChapterRail } from '@/components/layout/ChapterRail';
 import { Footer } from '@/components/layout/Footer';
 import { MotionProvider } from '@/components/motion/MotionProvider';
 
-const display = Cormorant_Garamond({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
-  style: ['normal', 'italic'],
+// Fonts are self-hosted from app/fonts (Latin subset), so builds never depend on a network download.
+const display = localFont({
+  src: [
+    { path: './fonts/cormorant-garamond-latin-300-normal.woff2', weight: '300', style: 'normal' },
+    { path: './fonts/cormorant-garamond-latin-300-italic.woff2', weight: '300', style: 'italic' },
+    { path: './fonts/cormorant-garamond-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/cormorant-garamond-latin-400-italic.woff2', weight: '400', style: 'italic' },
+    { path: './fonts/cormorant-garamond-latin-500-normal.woff2', weight: '500', style: 'normal' },
+    { path: './fonts/cormorant-garamond-latin-500-italic.woff2', weight: '500', style: 'italic' },
+  ],
   variable: '--font-cormorant',
   display: 'swap',
+  fallback: ['Georgia', 'serif'],
 });
-const sans = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' });
-const mono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['400', '500'], variable: '--font-plex-mono', display: 'swap' });
+const sans = localFont({
+  src: './fonts/manrope-latin-wght-normal.woff2',
+  weight: '200 800',
+  variable: '--font-manrope',
+  display: 'swap',
+  fallback: ['system-ui', 'sans-serif'],
+});
+const mono = localFont({
+  src: [
+    { path: './fonts/ibm-plex-mono-latin-400-normal.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/ibm-plex-mono-latin-500-normal.woff2', weight: '500', style: 'normal' },
+  ],
+  variable: '--font-plex-mono',
+  display: 'swap',
+  fallback: ['ui-monospace', 'monospace'],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -2,7 +2,7 @@ import type { LeadershipEntry } from './types';
 
 export const leadershipIntro = {
   heading: { lead: 'Taking initiative.', accent: 'Making things happen.' },
-  body: 'Four roles, from a school house to a college committee: leading a house, debating in committee, running a conference and supporting placements.',
+  body: 'Four roles so far. Captain of a school house, a delegate at MUN, Secretary General of TMUN, and now a member of the placement committee at TAPMI.',
 };
 
 export const leadership: LeadershipEntry[] = [
@@ -12,7 +12,7 @@ export const leadership: LeadershipEntry[] = [
     role: 'Blue House Captain',
     organisation: 'School, Thiruvananthapuram',
     body: [
-      'As captain of Blue House, I was responsible for a house of students across classes: putting teams together for school events, encouraging people to take part, and representing the house.',
+      'I was captain of Blue House at school. In practice that meant picking teams for events, getting people to actually sign up, and representing the house.',
     ],
     themes: ['Student leadership', 'Responsibility', 'Team coordination', 'School activities'],
     todo: ['Year you were captain', 'A photo from your house-captain year, if you have one'],
@@ -23,7 +23,7 @@ export const leadership: LeadershipEntry[] = [
     role: 'Delegate',
     organisation: 'Model United Nations',
     body: [
-      'I have taken part in Model United Nations conferences as a delegate: researching a country position, building arguments, and negotiating with other delegations in committee.',
+      "I've been a delegate at more than one Model United Nations conference. You research your country's position, work out your arguments, and then spend the conference negotiating with delegates who want something else.",
     ],
     themes: ['Research', 'Public speaking', 'Negotiation', 'Diplomacy'],
     awards: { title: 'Best Delegate', count: 2, note: 'Two Best Delegate awards' },
@@ -45,7 +45,7 @@ export const leadership: LeadershipEntry[] = [
     role: 'Secretary General',
     organisation: 'Trivandrum Model United Nations (TMUN)',
     body: [
-      'As Secretary General of TMUN, I led the organising side of the conference: planning it, working with the organising team, delegating responsibilities and seeing it through on the day.'
+      'At TMUN I was Secretary General, so the organising side was on me. That meant planning the conference, working with the organising team, handing out responsibilities and making sure it all came together on the day.'
     ],
     themes: ['Conference organisation', 'Team leadership', 'Delegation', 'Event execution'],
     todo: [
@@ -60,8 +60,8 @@ export const leadership: LeadershipEntry[] = [
     organisation: 'Placement and Corporate Engagement Committee, TAPMI Bengaluru',
     status: { label: 'Ongoing', tone: 'ongoing' },
     body: [
-      "I'm a member of TAPMI Bengaluru's Placement and Corporate Engagement Committee. I worked on GLC, contributing to the research and outreach behind it, and I'm now involved in the committee's ongoing placement work.",
-      'Placement details stay with the committee.',
+      "I'm on TAPMI Bengaluru's Placement and Corporate Engagement Committee. I worked on GLC, mostly on the research and outreach side, and right now I'm part of the committee's placement work.",
+      "I'll leave the placement details with the committee.",
     ],
     themes: ['Corporate outreach', 'Research', 'Event support', 'Placements (ongoing)'],
     todo: ['Full name of GLC and your specific role in it, if you want it shown'],

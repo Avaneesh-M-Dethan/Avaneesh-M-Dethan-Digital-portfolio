@@ -3,6 +3,7 @@ import type { Project } from '@/content/types';
 import { Img } from '@/components/ui/Img';
 import { Status } from '@/components/ui/Status';
 import { Arrow } from '@/components/ui/Arrow';
+import { resolveLinks, isExternal } from '@/lib/links';
 
 type Props = { project: Project; href: string; flip?: boolean; tone?: 'dark' | 'light' };
 
@@ -27,9 +28,18 @@ export function FeaturedCard({ project, href, flip = false, tone = 'dark' }: Pro
         </h3>
         {project.subtitle ? <p className="display mt-2 text-[1.35rem] italic leading-snug opacity-80">{project.subtitle}</p> : null}
         <p className="dim mt-5 measure">{project.summary}</p>
-        <span className="mono mt-8 inline-flex items-center gap-3 self-start border-b border-current pb-1.5 transition-colors duration-500 group-hover:text-gold group-focus-within:text-gold">
-          Read the case study <Arrow />
-        </span>
+        <div className="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <span className="mono inline-flex items-center gap-3 border-b border-current pb-1.5 transition-colors duration-500 group-hover:text-gold group-focus-within:text-gold">
+            Read the case study <Arrow />
+          </span>
+          {/* Outbound links sit above the card-wide link overlay so they stay clickable. */}
+          {resolveLinks(project.links).filter((l) => isExternal(l.href)).map((l) => (
+            <a key={l.href} href={l.href} target="_blank" rel="noopener noreferrer" className="mono faint relative z-10 inline-flex items-center gap-2.5 border-b border-transparent pb-1.5 transition-colors duration-500 hover:border-current hover:text-gold focus-visible:text-gold">
+              {l.label} <Arrow direction="up-right" />
+              <span className="sr-only">(opens in a new tab)</span>
+            </a>
+          ))}
+        </div>
       </div>
     </article>
   );

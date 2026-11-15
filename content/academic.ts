@@ -2,7 +2,7 @@ import type { Course, Project } from './types';
 
 export const academicIntro = {
   heading: { lead: 'Exploring ideas', accent: 'beyond the classroom.' },
-  body: 'Eight projects across four courses, made with my working group. Every case study quotes the work itself and links to the original deck, report or film.',
+  body: 'Eight projects across four courses, all with my working group. Each case study is pulled from the actual deck, report or film, and links straight to it.',
   folder: { label: 'All project files on Google Drive', href: 'https://drive.google.com/drive/folders/1c2tW-soLI_EIWcQe6QoFctKzgAXXtS5u' },
 };
 
@@ -547,25 +547,25 @@ export const courses: Course[] = [
   {
     code: 'LLR',
     name: 'Language, Literature and Rhetoric',
-    intro: 'How language persuades, and how people and brands are presented.',
+    intro: 'How language persuades, and how people and brands present themselves.',
     projects: [rhetoricalAnalysis, rebrandingNayar],
   },
   {
     code: 'DIR',
     name: 'Diversity, Inclusivity and Rootedness',
-    intro: 'Society, policy and culture, examined closely.',
+    intro: 'A closer look at society, policy and culture.',
     projects: [healthIndia, aiAndArt],
   },
   {
     code: 'TLM',
     name: 'Technology Literacy for Managers',
-    intro: 'Technology seen through a manager’s eyes: what it changes, and what it does not.',
+    intro: 'Technology from a manager’s point of view. What it changes, and what it doesn’t.',
     projects: [aiChips, genAiFinance, angadi],
   },
   {
     code: 'ACC',
     name: 'Accounting',
-    intro: 'The accounting cycle, worked end to end on a real company’s books.',
+    intro: 'The full accounting cycle, worked through on a real company’s books.',
     projects: [eternal],
   },
 ];

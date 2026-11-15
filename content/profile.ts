@@ -6,7 +6,7 @@ export const profile = {
   tagline: 'Curious by nature. Driven to build.',
   subTagline: 'Exploring the intersection of business, technology, creativity and entrepreneurship.',
   heroIntro:
-    'BBA student at T A Pai Management Institute, Bengaluru. From Thiruvananthapuram, Kerala. I like finding out how ideas become real products, businesses and experiences, usually by building one.',
+    "I'm doing my BBA at T A Pai Management Institute in Bengaluru, and I'm from Thiruvananthapuram. When I'm not in class I'm usually building something. It's the way I figure out how an idea turns into a real product or business.",
   heroMeta: [
     { label: 'Studying', value: 'BBA, TAPMI Bengaluru' },
     { label: 'From', value: 'Thiruvananthapuram' },
@@ -25,8 +25,8 @@ export const profile = {
 export const about = {
   heading: { lead: 'More than a designation.', accent: 'A work in progress.' },
   paragraphs: [
-    "I grew up in Thiruvananthapuram, Kerala, and I'm now studying for a BBA at TAPMI Bengaluru. Most of what pulls my attention sits where business meets technology: how an idea becomes a product, a company or an experience that people actually use.",
-    "I learn by building. That has meant starting a marketing studio before it had a single client, writing an AI assistant that runs on my own laptop, and putting a small Telegram bot to work on my college timetable. Not all of it is finished. All of it taught me something.",
+    "I grew up in Thiruvananthapuram and moved to Bengaluru for my BBA at TAPMI. The part of business I find most interesting is where it runs into technology. I want to know how an idea actually becomes something people use, and what it takes to make that work as a business.",
+    "Most of what I know, I picked up by building things. I started a marketing studio before it had a single client. I wrote an AI assistant that runs on my laptop. I set up a Telegram bot so I'd stop losing track of my attendance. Some of it is finished and some of it isn't yet.",
   ],
   interests: [
     'Business',

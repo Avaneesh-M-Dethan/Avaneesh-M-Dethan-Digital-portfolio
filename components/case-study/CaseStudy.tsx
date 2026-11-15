@@ -126,8 +126,8 @@ export function CaseStudy({ project, back, next }: Props) {
       {project.gallery?.length ? (
         <div className="shell pb-[clamp(72px,10vw,150px)]">
           <div className={`grid items-start gap-6 ${project.gallery.length > 1 ? "md:grid-cols-2" : ""}`}>
-            {project.gallery.map((g) => (
-              <figure key={g.key} className="flex flex-col">
+            {project.gallery.map((g, gi) => (
+              <figure key={g.key} className={`flex flex-col ${project.gallery!.length % 2 === 1 && gi === 0 ? "md:col-span-2" : ""}`}>
                 <div className="flex items-center justify-center bg-[var(--panel)] p-[clamp(0px,2vw,24px)]">
                   <Img image={g} sizes="(min-width: 768px) 50vw, 100vw" className={tall(g.key) ? 'max-h-[80vh] w-auto max-w-full' : 'w-full'} />
                 </div>

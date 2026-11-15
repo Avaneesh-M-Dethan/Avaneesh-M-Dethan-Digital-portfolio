@@ -69,6 +69,13 @@
     "srcSet": "/images/projects/quoin/quoin-identity-640.webp 640w, /images/projects/quoin/quoin-identity-1080.webp 1080w, /images/projects/quoin/quoin-identity-1600.webp 1600w, /images/projects/quoin/quoin-identity-2000.webp 2000w",
     "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQAAoAA4BaJaQAAvensxFKAAD+9plS6g5pW54aEZB8fL3EAAA="
   },
+  "projects/quoin/quoin-live-hero": {
+    "width": 1900,
+    "height": 865,
+    "src": "/images/projects/quoin/quoin-live-hero-1900.webp",
+    "srcSet": "/images/projects/quoin/quoin-live-hero-640.webp 640w, /images/projects/quoin/quoin-live-hero-1080.webp 1080w, /images/projects/quoin/quoin-live-hero-1600.webp 1600w, /images/projects/quoin/quoin-live-hero-1900.webp 1900w",
+    "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAcAA4BaJZwAAudg07cAAP722v1YkP/x2e+ByFkhNusDQYk1/OYAAAA="
+  },
   "projects/quoin/quoin-services": {
     "width": 2400,
     "height": 1560,

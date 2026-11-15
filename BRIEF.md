@@ -33,7 +33,7 @@ Every claim on the site is grounded in real material: project repositories, deck
 - **Framework:** Next.js 15 with TypeScript, exported as a static site. It is the same stack as his other projects, so he can read and edit it, and static output hosts free.
 - **Styling:** Tailwind CSS v4 plus a small editorial stylesheet: fluid type, per-section colour tones and hairlines.
 - **Motion:** Lenis smooth scrolling. Reveals use IntersectionObserver with CSS transitions, which is lighter than an animation library and kept Lighthouse at 98+ on mobile.
-- **Type:** Cormorant Garamond (display), Manrope (body) and IBM Plex Mono (labels), self-hosted at build time.
+- **Type:** Cormorant Garamond (display), Manrope (body) and IBM Plex Mono (labels). The font files live in `app/fonts`, so builds never need the internet.
 - **Images:** a build script turns originals into responsive WebP images with blur placeholders.
 - **Hosting:** static `out/` folder, ready for Netlify or Vercel. Both config files are included. Costs nothing.
 - **Content:** every word lives in `content/*.ts`, so copy is edited in one place, never inside components.
