@@ -211,7 +211,7 @@
 /* Failsafe: if the reveal controller never starts, show everything. */
 .js-motion.motion-failsafe:not(.motion-ready) [data-reveal],
 .js-motion.motion-failsafe:not(.motion-ready) [data-reveal] .mask-inner,
-.js-motion.motion-failsafe:not(.motion-ready) [data-reveal] img {
+.js-motion.motion-failsafe:not(.motion-ready) [data-reveal='image'] img {
   opacity: 1 !important; transform: none !important; clip-path: none !important;
 }
 
@@ -220,5 +220,5 @@
     animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important; scroll-behavior: auto !important;
   }
-  [data-reveal], [data-reveal] .mask-inner, [data-reveal] img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  [data-reveal], [data-reveal] .mask-inner, [data-reveal='image'] img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
 }

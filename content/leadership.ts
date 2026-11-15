@@ -27,10 +27,16 @@ export const leadership: LeadershipEntry[] = [
     ],
     themes: ['Research', 'Public speaking', 'Negotiation', 'Diplomacy'],
     awards: { title: 'Best Delegate', count: 2, note: 'Two Best Delegate awards' },
+    photos: [
+      {
+        key: 'personal/best-delegate-sarvomun-2024',
+        alt: 'Avaneesh smiling and holding up a Best Delegate plaque from SarvoMUN 2K24 in one hand and a gold Best Delegate trophy in the other.',
+        caption: 'Best Delegate, SarvoMUN 2K24',
+      },
+    ],
     todo: [
-      'Names and years of the conferences where you won Best Delegate',
+      'Name and year of your second Best Delegate conference (SarvoMUN 2K24 is shown on the trophy)',
       'Committees and countries you represented',
-      'Conference photos and certificates',
     ],
   },
   {

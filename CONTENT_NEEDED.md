@@ -23,7 +23,7 @@ The current Quoin code on your laptop has already removed all of these. Redeploy
 | Year you were Blue House Captain | Timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
 | TMUN year | Timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
 | Start year of your BBA | Timeline | `content/education.ts` |
-| MUN conferences where you won Best Delegate (names, years) | Leadership → MUN | `content/leadership.ts` |
+| Your second Best Delegate conference (SarvoMUN 2K24 is shown from the trophy photo) | Leadership → MUN | `content/leadership.ts` |
 | Committees and countries you represented at MUN | Leadership → MUN | `content/leadership.ts` |
 | Full name of GLC and your role in it (only if you want it shown) | Leadership → Placement committee | `content/leadership.ts` |
 | Your LinkedIn URL | Connect | `content/social.ts` |
@@ -36,11 +36,10 @@ Every activity links somewhere except these, which have no public home yet.
 
 | Activity | What would work |
 |---|---|
-| AI and Art (DIR) | Add its deck to the Drive folder. It's the only academic deck missing. |
 | Angadi | Upload the course film to Drive, make the repo public, or deploy a demo. |
-| Jarvis | A short screen recording on Drive, or a public GitHub repo. |
-| Registro Watcher | A public GitHub repo (with your credentials removed). |
-| AI Automations | Screenshots or a recording of a workflow, on Drive. |
+| Jarvis | Screenshot added. A short screen recording on Drive or a public repo would give it a link. |
+| Registro Watcher | Screenshot added. A public GitHub repo (credentials removed) would give it a link. |
+| AI Automations | Zapier screenshot added (email addresses blurred). A recording on Drive would give it a link. |
 | MUN, TMUN, house captain, placement committee | Certificates, event photos or a TMUN page or Instagram link. |
 | Suminagashi live demo | Drag the `dragon web` folder onto https://app.netlify.com/drop. GitHub is already linked. |
 
@@ -48,12 +47,11 @@ Every activity links somewhere except these, which have no public home yet.
 
 Every academic deck credits Working Group 1. The site says "Group project" and claims no individual contribution, except Eternal Limited, where the report itself lists you as presenter of the final sections. If you tell me which part was yours in the others, I'll add it.
 
-## 5. Photographs (optional)
+## 5. Photographs
 
-Only your real, best photos. The site looks complete without them.
+Three are placed: the speaking photo in About, the SarvoMUN Best Delegate photo under MUN, and the "Let’s Talk" portrait in Connect. More would help in two places:
 
-- **An editorial portrait** for the hero. Not a passport photo.
-- **MUN and TMUN**: conference photos and certificates.
+- **TMUN**: a photo from the conference you led.
 - **Beyond the work**: up to four photos (sports, travel).
 
 Put them in `assets-src/personal/`, run `npm run images`, and send me the filenames.

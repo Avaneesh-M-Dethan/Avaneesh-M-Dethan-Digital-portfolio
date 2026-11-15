@@ -2,11 +2,10 @@ import type { Course, Project } from './types';
 
 export const academicIntro = {
   heading: { lead: 'Exploring ideas', accent: 'beyond the classroom.' },
-  body: 'Eight projects across four courses, made with my working group. The case studies quote the work itself and link to the original decks.',
+  body: 'Eight projects across four courses, made with my working group. Every case study quotes the work itself and links to the original deck, report or film.',
+  folder: { label: 'All project files on Google Drive', href: 'https://drive.google.com/drive/folders/1c2tW-soLI_EIWcQe6QoFctKzgAXXtS5u' },
 };
 
-/** Shown on rows whose material has not been added yet. */
-const awaiting = { label: 'Write-up to follow', tone: 'pending' } as const;
 const done = { label: 'Completed', tone: 'done' } as const;
 
 /** Every deck lists the same five members. */
@@ -214,13 +213,48 @@ const aiAndArt: Project = {
   slug: 'ai-and-art',
   index: 'DIR · 02',
   title: 'AI and Art',
+  subtitle: 'A short documentary: the people behind the ink',
   category: 'Diversity, Inclusivity and Rootedness',
-  status: awaiting,
-  summary: 'An exploration of where artificial intelligence meets artistic expression.',
+  status: done,
+  year: '2026',
+  summary: 'A short documentary in which we asked tattoo artists how AI is changing their craft, and whether it could ever replace them.',
+  authorship: 'Group project',
   tier: 'index',
-  links: [],
-  sections: [],
-  todo: ['AI and Art: add the deck to the Drive folder (it is the only one missing)'],
+  coverType: { display: 'The people behind the ink.', caption: 'A documentary on AI and tattoo art.' },
+  links: [{ label: 'Watch the documentary on Google Drive', href: drive('1ld7C7AgaYxsryI6_hZ8O2EY61q9lWdoL') }],
+  tools: ['Documentary', 'Field interviews', 'Video editing'],
+  facts: [
+    { label: 'Team', value: team },
+    { label: 'Format', value: 'Short documentary film' },
+    { label: 'Interviewees', value: 'Tattoo artists in their studios' },
+  ],
+  sections: [
+    {
+      heading: 'The question',
+      body: [
+        'Art has always reflected human creativity, skill and imagination. With AI entering almost every creative field, we asked what happens to an artist when technology starts creating art of its own, and went to tattoo studios to find out.',
+      ],
+    },
+    {
+      heading: 'What the artists told us',
+      itemStyle: 'grid',
+      items: [
+        { label: 'Seeing the idea', body: 'Clients arrive with a design in their head. Artists use AI to turn it into reference images quickly, then refine them in Photoshop.' },
+        { label: 'Saving time', body: 'Design and stencil work that used to take hours can now take a fraction of the time.' },
+        { label: 'Losing something', body: 'One artist put it plainly: the time saved is the positive; the creativity being lost is the negative.' },
+        { label: 'The human hand', body: 'AI can offer a reference, but not the tattoo itself. A person knows when to stop because the client is in pain.' },
+      ],
+    },
+    {
+      heading: 'In their words',
+      quote: { text: 'Machines can do anything but not like a human. It\u2019s a handmade thing.', source: 'A tattoo artist interviewed for the film' },
+    },
+    {
+      heading: 'Takeaway',
+      body: ['In the studios we visited, AI is changing how designs are sketched, not who holds the needle.'],
+    },
+  ],
+  todo: ['AI and Art: which part of the film was yours (filming, interviews, editing)'],
 };
 
 const aiChips: Project = {

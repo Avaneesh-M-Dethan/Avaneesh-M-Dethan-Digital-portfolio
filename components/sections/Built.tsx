@@ -4,6 +4,15 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import { FeaturedCard } from './FeaturedCard';
 import { IndexRow } from './IndexRow';
 import { ProjectDetails } from './ProjectDetails';
+import { getImage } from '@/lib/images';
+
+// A small (~640px) variant of a manifest image for hover previews.
+function previewFor(p: Project) {
+  const e = p.cover ? getImage(p.cover.key) : null;
+  if (!e) return undefined;
+  const small = e.srcSet.split(', ')[0].split(' ')[0];
+  return { src: small, width: e.width, height: e.height };
+}
 
 export function Built() {
   // Featured work opens and closes the chapter; the typographic index sits between.
@@ -14,7 +23,7 @@ export function Built() {
   return (
     <section id="built" data-chapter="built" aria-labelledby="built-title" className="tone-ink">
       <div className="chapter shell">
-        <SectionHeader id="built-title" number="04" label="Entrepreneurship & things I've built" heading={builtIntro.heading} body={builtIntro.body} />
+        <SectionHeader id="built-title" number="05" label="Entrepreneurship & things I've built" heading={builtIntro.heading} body={builtIntro.body} />
 
         <div className="mt-[clamp(64px,9vw,128px)] flex flex-col gap-[clamp(80px,10vw,140px)]">
           {first ? <FeaturedCard project={first} href={`/work/${first.slug}/`} /> : null}
@@ -27,7 +36,7 @@ export function Built() {
               </div>
               <ul className="hairline border-t">
                 {index.map((p: Project) => (
-                  <IndexRow key={p.slug} index={p.index} title={p.title} category={p.category} summary={p.summary} status={p.status}>
+                  <IndexRow key={p.slug} index={p.index} title={p.title} category={p.category} summary={p.summary} status={p.status} preview={previewFor(p)}>
                     {p.sections.length ? <ProjectDetails project={p} /> : undefined}
                   </IndexRow>
                 ))}

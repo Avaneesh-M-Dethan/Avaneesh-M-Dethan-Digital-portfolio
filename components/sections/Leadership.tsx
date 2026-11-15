@@ -65,7 +65,7 @@ function Entry({ entry }: { entry: LeadershipEntry }) {
         </ul>
 
         {entry.photos?.length ? (
-          <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          <div className={`mt-10 grid gap-4 ${entry.photos.length > 1 ? "sm:grid-cols-2" : "max-w-[360px]"}`}>
             {entry.photos.map((ph) => (
               <figure key={ph.key}>
                 <Img image={ph} sizes="(min-width: 768px) 33vw, 100vw" />

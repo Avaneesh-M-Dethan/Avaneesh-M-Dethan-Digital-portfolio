@@ -1,4 +1,25 @@
 {
+  "personal/best-delegate-sarvomun-2024": {
+    "width": 768,
+    "height": 1020,
+    "src": "/images/personal/best-delegate-sarvomun-2024-768.webp",
+    "srcSet": "/images/personal/best-delegate-sarvomun-2024-640.webp 640w, /images/personal/best-delegate-sarvomun-2024-768.webp 768w",
+    "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYwC7IKnDMSlSUkhXuqZtWADeX7jihR5P55KlxPE9cdzMJzW7BC4E0bBozasG+JG49zlG6ajRyjUgyyz2yvF4hKvrSYeHmmP5p+fvW6BanPmdleesCb037OeDkR8H4bBqHS57z+Az5RqaJSJcNzBV+AHqN2it/78ehgTAAAA="
+  },
+  "personal/portrait-lets-talk": {
+    "width": 1200,
+    "height": 1600,
+    "src": "/images/personal/portrait-lets-talk-1200.webp",
+    "srcSet": "/images/personal/portrait-lets-talk-640.webp 640w, /images/personal/portrait-lets-talk-1080.webp 1080w, /images/personal/portrait-lets-talk-1200.webp 1200w",
+    "blur": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoQABUAPu1kqU2ppaQiMAgBMB2JYgDE2B8xSoY+ewsUYRpuwAD+9DLHftlZZbyzPMFHNTvk08emyLVYfboxU9FTOoAxbug/IOarDtLK3GQ7jTv5o7cwlCXGXmBHcd7/yBPLJMn+yEa72TQnDf90lqoAAAA="
+  },
+  "personal/speaking-mun": {
+    "width": 608,
+    "height": 678,
+    "src": "/images/personal/speaking-mun-608.webp",
+    "srcSet": "/images/personal/speaking-mun-608.webp 608w",
+    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoQABIAPu1iqU2ppaOiMAgBMB2JQBWABF2/zg2wmiVWTwH4AP7yq8vtyAQGZ7c/P/zGMyXbaD26O+1ei2EVzIxBRNqJ6UK905r7X1qlpFhmu+2FokDtJbZgf0AAAA=="
+  },
   "projects/angadi/angadi-approval-guardrail": {
     "width": 1082,
     "height": 1960,
@@ -20,6 +41,20 @@
     "srcSet": "/images/projects/angadi/angadi-owner-home-640.webp 640w, /images/projects/angadi/angadi-owner-home-1080.webp 1080w, /images/projects/angadi/angadi-owner-home-1082.webp 1082w",
     "blur": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JbACdMoRwACndI5sPY3CyqwXoAP7qvUAhhTjVUTrOQ0rfirBuADLuBKloG/DAdqpJfSabcTNUAuGMxKxJDOwH4fsZTL/epx8v8DaUIFuCsbOuE4voxyz0x752/DMePNcifRbFkQNSr5Ppmt1Ry3rGuo40JBftKtH676FFpoJQcVoJGQQgAA=="
   },
+  "projects/automations/zapier-form-autoreply": {
+    "width": 1907,
+    "height": 872,
+    "src": "/images/projects/automations/zapier-form-autoreply-1907.webp",
+    "srcSet": "/images/projects/automations/zapier-form-autoreply-640.webp 640w, /images/projects/automations/zapier-form-autoreply-1080.webp 1080w, /images/projects/automations/zapier-form-autoreply-1600.webp 1600w, /images/projects/automations/zapier-form-autoreply-1907.webp 1907w",
+    "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACQAQCdASoQAAcAA4BaJYwAAudFvsAA/vCs2wsVXkMhKF9YaGJInOHTRBnDA1OIAAA="
+  },
+  "projects/jarvis/jarvis-interface": {
+    "width": 1900,
+    "height": 876,
+    "src": "/images/projects/jarvis/jarvis-interface-1900.webp",
+    "srcSet": "/images/projects/jarvis/jarvis-interface-640.webp 640w, /images/projects/jarvis/jarvis-interface-1080.webp 1080w, /images/projects/jarvis/jarvis-interface-1600.webp 1600w, /images/projects/jarvis/jarvis-interface-1900.webp 1900w",
+    "blur": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAABQAQCdASoQAAcAA4BaJZwABDOAAP70WAbR5Lh2XsgBAAAA"
+  },
   "projects/quoin/quoin-cover": {
     "width": 2400,
     "height": 1500,
@@ -40,6 +75,13 @@
     "src": "/images/projects/quoin/quoin-services-2000.webp",
     "srcSet": "/images/projects/quoin/quoin-services-640.webp 640w, /images/projects/quoin/quoin-services-1080.webp 1080w, /images/projects/quoin/quoin-services-1600.webp 1600w, /images/projects/quoin/quoin-services-2000.webp 2000w",
     "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAAAwAQCdASoQAAoAA4BaJaQAA3AA/vN37ZAX7ZFUkgXLMweEWab9ULkAAAA="
+  },
+  "projects/registro/registro-attendance": {
+    "width": 818,
+    "height": 1600,
+    "src": "/images/projects/registro/registro-attendance-818.webp",
+    "srcSet": "/images/projects/registro/registro-attendance-640.webp 640w, /images/projects/registro/registro-attendance-818.webp 818w",
+    "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQAwCdASoQAB8APu1iqU2ppaOiMAgBMB2JZQAIEAMktcyxm5Dlu9gA/tzKtAeMSjtQPnfhePxCK486WG6qExco460Vafi56fVCEBkxChe5DRfDn33SaS4wpm4gnItWAyd463wFOnKxEYcO4BBr0Z3VvzL369dgf41P+voF7zU8J6PAAAA="
   },
   "projects/suminagashi/studio-sumi-concept": {
     "width": 1200,

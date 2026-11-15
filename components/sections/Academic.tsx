@@ -12,9 +12,16 @@ export function Academic() {
   return (
     <section id="academic" data-chapter="academic" aria-labelledby="academic-title" className="tone-bone on-light">
       <div className="chapter shell">
-        <SectionHeader id="academic-title" number="05" label="Academic projects & research" heading={academicIntro.heading} body={academicIntro.body} />
+        <SectionHeader id="academic-title" number="04" label="Academic projects & research" heading={academicIntro.heading} body={academicIntro.body} />
 
-        <div className="mt-[clamp(64px,9vw,128px)] flex flex-col gap-[clamp(72px,9vw,128px)]">
+        <div className="mt-10 flex justify-start lg:justify-end" data-reveal="fade">
+          <a href={academicIntro.folder.href} target="_blank" rel="noopener noreferrer" className="btn-line">
+            {academicIntro.folder.label} <Arrow direction="up-right" />
+            <span className="sr-only">(opens in a new tab)</span>
+          </a>
+        </div>
+
+        <div className="mt-[clamp(56px,8vw,112px)] flex flex-col gap-[clamp(72px,9vw,128px)]">
           {courses.map((course) => (
             <article key={course.code} className="grid grid-cols-12 gap-x-6 gap-y-10" aria-labelledby={`course-${course.code}`}>
               <header className="col-span-12 lg:col-span-3">

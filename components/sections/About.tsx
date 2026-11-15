@@ -4,6 +4,7 @@ import { education, timelineIntro } from '@/content/education';
 import { Arrow } from '@/components/ui/Arrow';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Todo } from '@/components/ui/Todo';
+import { Img } from '@/components/ui/Img';
 
 export function About() {
   return (
@@ -12,23 +13,32 @@ export function About() {
         <SectionHeader id="about-title" number="02" label="About me" heading={about.heading} />
 
         <div className="mt-[clamp(56px,8vw,112px)] grid grid-cols-12 gap-x-6 gap-y-14">
-          <div className="col-span-12 flex flex-col gap-7 md:col-span-7 lg:col-span-6">
-            {about.paragraphs.map((p, i) => (
-              <p key={i} className={i === 0 ? 'lead measure' : 'dim measure'} data-reveal="fade">
-                {p}
-              </p>
-            ))}
-          </div>
-          <div className="col-span-12 md:col-span-5 lg:col-span-4 lg:col-start-9" data-reveal="fade">
-            <p className="mono faint mb-5">{about.interestsLabel}</p>
-            <ul className="border-t border-[var(--line)]">
-              {about.interests.map((t, i) => (
-                <li key={t} className="flex items-baseline justify-between gap-4 border-b border-[var(--line)] py-3">
-                  <span className="display text-[1.5rem] leading-tight">{t}</span>
-                  <span className="mono faint">{String(i + 1).padStart(2, '0')}</span>
-                </li>
+          {/* Portrait: offset down on desktop for an editorial, staggered feel */}
+          <figure className="col-span-12 max-w-[440px] sm:col-span-8 md:col-span-5 md:max-w-none lg:col-span-4 lg:mt-24">
+            <div className="overflow-hidden">
+              <Img image={about.photo} sizes="(min-width: 1024px) 30vw, (min-width: 768px) 40vw, 90vw" imgClassName="grayscale-[25%]" />
+            </div>
+          </figure>
+
+          <div className="col-span-12 md:col-span-7 lg:col-span-7 lg:col-start-6">
+            <div className="flex flex-col gap-7">
+              {about.paragraphs.map((p, i) => (
+                <p key={i} className={i === 0 ? 'lead measure' : 'dim measure'} data-reveal="fade">
+                  {p}
+                </p>
               ))}
-            </ul>
+            </div>
+            <div className="mt-14" data-reveal="fade">
+              <p className="mono faint mb-5">{about.interestsLabel}</p>
+              <ul className="grid border-t border-[var(--line)] sm:grid-cols-2 sm:gap-x-8">
+                {about.interests.map((t, i) => (
+                  <li key={t} className="flex items-baseline justify-between gap-4 border-b border-[var(--line)] py-3">
+                    <span className="display text-[1.5rem] leading-tight">{t}</span>
+                    <span className="mono faint">{String(i + 1).padStart(2, '0')}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

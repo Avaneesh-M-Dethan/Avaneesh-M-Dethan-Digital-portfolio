@@ -37,4 +37,8 @@ export const about = {
     'Creative experimentation',
   ],
   interestsLabel: 'What I keep coming back to',
+  photo: {
+    key: 'personal/speaking-mun',
+    alt: 'Avaneesh in a dark suit and tie, holding a microphone and looking down at it as he prepares to speak.',
+  } as ImageRef,
 };

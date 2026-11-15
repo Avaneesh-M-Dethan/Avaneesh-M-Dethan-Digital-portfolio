@@ -82,6 +82,11 @@ export const projects: Project[] = [
     tier: 'index',
     links: [],
     tools: ['Zapier', 'Gmail', 'Google Forms', 'Groq', 'Gemini', 'MCP'],
+    cover: {
+      key: 'projects/automations/zapier-form-autoreply',
+      alt: 'A Zapier workflow with two steps, Google Forms "New Form Response" followed by Gmail "Send Email", with the email settings panel open. Email addresses are blurred.',
+      caption: 'The Zapier flow: a new Google Form response triggers an automatic Gmail reply. Addresses blurred.',
+    },
     sections: [
       {
         heading: 'What I have tried',
@@ -112,6 +117,11 @@ export const projects: Project[] = [
     tier: 'index',
     links: [],
     tools: ['Python', 'FastAPI', 'Next.js', 'Three.js', 'Groq', 'ElevenLabs', 'Supabase'],
+    cover: {
+      key: 'projects/jarvis/jarvis-interface',
+      alt: 'The Jarvis interface: a dark screen headed "Jarvis AI, your personal AI operating system", with a "standing by" status, an "Ask Jarvis anything" input with a microphone button, and a glowing wireframe orb.',
+      caption: 'The Jarvis home screen, standing by.',
+    },
     sections: [
       {
         heading: 'How it decides',
@@ -152,6 +162,11 @@ export const projects: Project[] = [
     tier: 'index',
     links: [],
     tools: ['JavaScript', 'Cloudflare Workers', 'Telegram Bot API'],
+    cover: {
+      key: 'projects/registro/registro-attendance',
+      alt: 'Registro Watcher in Telegram: an attendance summary listing each course with its percentage and how many more classes can be missed, with the bot command menu open.',
+      caption: 'A real attendance summary, with the command menu open.',
+    },
     sections: [
       {
         heading: 'The problem',
