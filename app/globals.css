@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+/* ───────────── Design tokens ───────────── */
+@theme {
+  --color-ink: #101010;
+  --color-charcoal: #1b1b1b;
+  --color-bone: #eae7df;
+  --color-gold: #b9a16a;
+  --color-gold-deep: #7d6838;
+  --color-grey: #888888;
+  --color-paper-ink: #1c1a16;
+
+  --font-display: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-manrope), 'Manrope', system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), 'IBM Plex Mono', ui-monospace, monospace;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+:root {
+  --gutter: clamp(16px, 4.5vw, 72px);
+  --max: 1440px;
+  --nav-h: 64px;
+  --line-dark: rgb(234 231 223 / 0.13);
+  --line-light: rgb(28 26 22 / 0.16);
+  --text-dim: rgb(234 231 223 / 0.7);
+  --text-faint: rgb(234 231 223 / 0.56);
+  --ink-dim: rgb(28 26 22 / 0.74);
+  --line: var(--line-dark);
+  --panel: #171716;
+  --dim: var(--text-dim); --faint: var(--text-faint); --accent: var(--color-gold); --st-live: #9cc4a3; --st-exp: #b3bdd1;
+
+  /* Fluid type scale */
+  --fs-hero: clamp(3.4rem, 15vw, 15rem);
+  --fs-h1: clamp(2.6rem, 6.4vw, 6rem);
+  --fs-h2: clamp(2.2rem, 5vw, 4.5rem);
+  --fs-h3: clamp(1.7rem, 3vw, 2.6rem);
+  --fs-h4: clamp(1.3rem, 1.9vw, 1.65rem);
+  --fs-body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+  --fs-lead: clamp(1.15rem, 1rem + 0.55vw, 1.45rem);
+  --fs-mono: 0.6875rem;
+}
+/* Phones: the name can run larger because line two is not indented. */
+@media (max-width: 639px) {
+  :root { --fs-hero: 16.5vw; }
+}
+
+/* ───────────── Base ───────────── */
+@layer base {
+  html {
+    background: var(--color-ink);
+    color: var(--color-bone);
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-padding-top: var(--nav-h);
+  }
+  html.lenis, html.lenis body { height: auto; }
+  .lenis.lenis-smooth { scroll-behavior: auto !important; }
+  .lenis.lenis-stopped { overflow: hidden; }
+
+  body {
+    font-family: var(--font-sans);
+    font-size: var(--fs-body);
+    line-height: 1.65;
+    background: var(--color-ink);
+    overflow-x: clip;
+  }
+  ::selection { background: var(--color-gold); color: var(--color-ink); }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; color: inherit; cursor: pointer; background: none; border: 0; }
+
+  :focus-visible {
+    outline: 1.5px solid var(--color-gold);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+  .tone-bone :focus-visible { outline-color: var(--color-gold-deep); }
+}
+
+/* ───────────── Editorial primitives ───────────── */
+@layer components {
+  .shell { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+
+  .display { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.015em; line-height: 0.98; }
+  .display em, .accent { font-style: italic; font-weight: 300; }
+  .accent-gold { color: var(--accent); }
+
+  .h1 { font-size: var(--fs-h1); }
+  .h2 { font-size: var(--fs-h2); }
+  .h3 { font-size: var(--fs-h3); line-height: 1.04; }
+  .h4 { font-size: var(--fs-h4); line-height: 1.15; }
+
+  .mono {
+    font-family: var(--font-mono);
+    font-size: var(--fs-mono);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .lead { font-size: var(--fs-lead); line-height: 1.55; }
+  .measure { max-width: 62ch; }
+  .dim { color: var(--dim); }
+  .faint { color: var(--faint); }
+
+  .hairline { border-color: var(--line); }
+
+  /* Sections */
+  .chapter { position: relative; padding-block: clamp(96px, 13vw, 190px); }
+  .tone-ink { background: var(--color-ink); color: var(--color-bone); --panel: #171716; --line: var(--line-dark); --dim: var(--text-dim); --faint: var(--text-faint); --accent: var(--color-gold); --st-live: #9cc4a3; --st-exp: #b3bdd1; }
+  .tone-charcoal { background: var(--color-charcoal); color: var(--color-bone); --panel: #232322; --line: var(--line-dark); --dim: var(--text-dim); --faint: var(--text-faint); --accent: var(--color-gold); --st-live: #9cc4a3; --st-exp: #b3bdd1; }
+  .tone-bone { background: var(--color-bone); color: var(--color-paper-ink); --panel: #e1ddd2; --line: var(--line-light); --dim: var(--ink-dim); --faint: rgb(28 26 22 / 0.66); --accent: var(--color-gold-deep); --st-live: #2f5c39; --st-exp: #3d4a66; }
+
+  /* Underline link: grows from the left */
+  .link-line {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    transition: background-size 0.6s var(--ease-out-expo);
+    padding-bottom: 2px;
+  }
+  .link-line:hover, .link-line:focus-visible { background-size: 100% 1px; }
+
+  /* Hairline pill button with a gold fill that rises on hover */
+  .btn-line {
+    display: inline-flex; align-items: center; gap: 0.9rem;
+    min-height: 48px; padding: 0 1.4rem;
+    border: 1px solid currentColor; border-radius: 999px;
+    font-family: var(--font-mono); font-size: var(--fs-mono);
+    letter-spacing: 0.16em; text-transform: uppercase;
+    position: relative; overflow: hidden; isolation: isolate;
+    transition: color 0.5s var(--ease-out-expo), border-color 0.5s var(--ease-out-expo);
+  }
+  .btn-line::before {
+    content: ''; position: absolute; inset: 0; z-index: -1;
+    background: var(--color-gold);
+    transform: translateY(101%);
+    transition: transform 0.6s var(--ease-out-expo);
+  }
+  .btn-line:hover::before, .btn-line:focus-visible::before { transform: translateY(0); }
+  .btn-line:hover, .btn-line:focus-visible { color: var(--color-ink); border-color: var(--color-gold); }
+  .btn-line .arrow { transition: transform 0.6s var(--ease-out-expo); }
+  .btn-line:hover .arrow, .btn-line:focus-visible .arrow { transform: translateX(4px); }
+
+  /* Status dot + label */
+  .status { display: inline-flex; align-items: center; gap: 0.55rem; }
+  .status::before { content: ''; width: 6px; height: 6px; border-radius: 99px; background: currentColor; flex: none; }
+  .status-live { color: var(--st-live); }
+  .status-ongoing { color: var(--accent); }
+  .status-done { color: var(--dim); }
+  .status-experiment { color: var(--st-exp); }
+  .status-pending { color: var(--faint); }
+
+  /* Placeholder markers: visible in development only (components/ui/Todo.tsx) */
+  .todo-marker {
+    display: inline-flex; gap: 0.5rem; align-items: baseline;
+    border: 1px dashed #d98b4b; color: #e9995a; background: rgb(217 139 75 / 0.08);
+    padding: 0.35rem 0.6rem; border-radius: 4px;
+    font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.04em; line-height: 1.4;
+  }
+
+  /* Expandable rows: animate height with grid rows, no JS measuring */
+  .expand { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.7s var(--ease-out-expo); }
+  .expand[data-open='true'] { grid-template-rows: 1fr; }
+  .expand > .expand-inner { overflow: hidden; min-height: 0; }
+
+  .grain::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.05; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* ───────────── Motion ───────────── */
+/* Hero entrance is pure CSS so it plays on first paint, before JavaScript loads. */
+@keyframes rise { from { transform: translate3d(0, 108%, 0); } to { transform: translate3d(0, 0, 0); } }
+@keyframes fade-up { from { opacity: 0; transform: translate3d(0, 18px, 0); } to { opacity: 1; transform: none; } }
+@keyframes draw-x { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes scroll-cue {
+  0% { transform: scaleY(0); transform-origin: top; }
+  45% { transform: scaleY(1); transform-origin: top; }
+  55% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@layer components {
+  .mask { display: block; overflow: hidden; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+  .mask > .mask-inner { display: block; }
+}
+.intro-rise { animation: rise 1.25s var(--ease-out-expo) both; }
+.intro-fade { animation: fade-up 1s var(--ease-out-expo) both; }
+.intro-draw { transform-origin: left; animation: draw-x 1.5s var(--ease-out-expo) both; }
+.scroll-cue { animation: scroll-cue 2.4s var(--ease-in-out-soft) infinite; }
+
+/* Scroll reveals: hidden only after JS confirms it will run them (see app/layout.tsx). */
+.js-motion [data-reveal='fade'] { opacity: 0; transform: translate3d(0, 28px, 0); }
+.js-motion [data-reveal='lines'] .mask-inner { transform: translate3d(0, 108%, 0); }
+.js-motion [data-reveal='image'] { clip-path: inset(100% 0 0 0); }
+.js-motion [data-reveal='draw'] { transform: scaleX(0); transform-origin: left; }
+/* Failsafe: if the reveal controller never starts, show everything. */
+.js-motion.motion-failsafe:not(.motion-ready) [data-reveal],
+.js-motion.motion-failsafe:not(.motion-ready) [data-reveal] .mask-inner {
+  opacity: 1 !important; transform: none !important; clip-path: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important; scroll-behavior: auto !important;
+  }
+  [data-reveal], [data-reveal] .mask-inner { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+}
