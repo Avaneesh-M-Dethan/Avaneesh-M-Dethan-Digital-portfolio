@@ -34,7 +34,7 @@ for (const w of widths) {
     await page.waitForTimeout(600);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - window.innerWidth);
     if (overflow > 1) problems.push(`[${w}] ${p} horizontal overflow: ${overflow}px`);
-    const hidden = await page.evaluate(() => [...document.querySelectorAll('[data-reveal]')].filter((el) => el.getAttribute('data-reveal') !== 'done').length);
+    const hidden = await page.evaluate(() => [...document.querySelectorAll('[data-reveal]')].filter((el) => !el.hasAttribute('data-shown') && getComputedStyle(el).display !== 'none').length);
     if (hidden && !reduced) problems.push(`[${w}] ${p} ${hidden} reveal element(s) never revealed`);
     (await page.$$eval('a[href]', (as) => as.map((a) => a.getAttribute('href')))).forEach((href) => {
       if (href && (href.startsWith('/') || href.startsWith('#'))) internalLinks.add(href.startsWith('#') ? p + href : href);

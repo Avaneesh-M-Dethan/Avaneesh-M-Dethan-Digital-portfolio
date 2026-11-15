@@ -3,10 +3,6 @@
 import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Lenis from 'lenis';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 let lenis: Lenis | null = null;
 export const getLenis = () => lenis;
@@ -28,40 +24,33 @@ export function scrollToTarget(target: string | HTMLElement | number) {
 }
 
 /**
- * One motion system for the whole site:
+ * One lightweight motion system for the whole site:
  * - Lenis smooth scrolling (off for reduced motion)
- * - ScrollTrigger reveals for [data-reveal] = fade | lines | image | draw
- * - Light parallax for [data-parallax]
- * - Smooth in-page anchor links
+ * - Scroll reveals for [data-reveal] = fade | lines | image | draw. An IntersectionObserver adds
+ *   [data-shown]; CSS transitions do the animating (see app/globals.css). No layout reads per element.
+ * - [data-thread]: a timeline line that fills with scroll progress through its parent
+ * - Smooth in-page anchor links that also move keyboard focus
  */
 export function MotionProvider() {
   const pathname = usePathname();
 
   // Lenis + anchor handling: once per app lifetime.
   useEffect(() => {
-    const reduced = prefersReducedMotion();
-    if (!reduced) {
-      lenis = new Lenis({ duration: 1.15, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-      lenis.on('scroll', ScrollTrigger.update);
-      const raf = (time: number) => lenis?.raf(time * 1000);
-      gsap.ticker.add(raf);
-      gsap.ticker.lagSmoothing(0);
-      (window as unknown as { __lenisRaf?: typeof raf }).__lenisRaf = raf;
+    if (!prefersReducedMotion()) {
+      lenis = new Lenis({ duration: 1.15, autoRaf: true, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
     }
 
     const onClick = (e: MouseEvent) => {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       const a = (e.target as HTMLElement).closest('a');
       if (!a) return;
-      const href = a.getAttribute('href') || '';
-      const url = new URL(href, window.location.href);
+      const url = new URL(a.getAttribute('href') || '', window.location.href);
       if (url.origin !== window.location.origin || url.pathname !== window.location.pathname || !url.hash) return;
       const el = document.getElementById(decodeURIComponent(url.hash.slice(1)));
       if (!el) return;
       e.preventDefault();
       history.pushState(null, '', url.hash);
       scrollToTarget(el);
-      // Move focus for keyboard and screen-reader users without a second jump.
       el.setAttribute('tabindex', '-1');
       el.focus({ preventScroll: true });
     };
@@ -69,24 +58,15 @@ export function MotionProvider() {
 
     return () => {
       document.removeEventListener('click', onClick);
-      const raf = (window as unknown as { __lenisRaf?: (t: number) => void }).__lenisRaf;
-      if (raf) gsap.ticker.remove(raf);
       lenis?.destroy();
       lenis = null;
     };
   }, []);
 
-  // Reveals: re-scan on every route.
+  // Per route: position, reveals, threads.
   useEffect(() => {
     const root = document.documentElement;
-    if (prefersReducedMotion()) {
-      root.classList.add('motion-ready');
-      return;
-    }
-    let cancelled = false;
-    let ctx: gsap.Context | null = null;
 
-    // Arriving on a new page with a hash: jump there once layout settles.
     if (window.location.hash) {
       const el = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
       if (el) requestAnimationFrame(() => lenis?.scrollTo(el, { immediate: true, offset: -8 }));
@@ -94,57 +74,54 @@ export function MotionProvider() {
       lenis?.scrollTo(0, { immediate: true });
     }
 
-    const fontsReady = document.fonts?.status === 'loaded' ? Promise.resolve() : document.fonts?.ready ?? Promise.resolve();
+    const reveals = Array.from(document.querySelectorAll<HTMLElement>('[data-reveal]:not([data-shown])'));
+    let io: IntersectionObserver | null = null;
+    if (prefersReducedMotion() || !('IntersectionObserver' in window)) {
+      reveals.forEach((el) => el.setAttribute('data-shown', ''));
+    } else {
+      io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.setAttribute('data-shown', '');
+            io?.unobserve(entry.target);
+          });
+        },
+        { rootMargin: '0px 0px -10% 0px', threshold: 0.01 },
+      );
+      reveals.forEach((el) => io?.observe(el));
+    }
+    root.classList.add('motion-ready');
 
-    fontsReady.then(() => {
-      if (cancelled) return;
-      ctx = gsap.context(() => {
-        const ease = 'expo.out';
-        gsap.utils.toArray<HTMLElement>('[data-reveal]').forEach((el) => {
-          const kind = el.dataset.reveal;
-          if (!kind || kind === 'done') return;
-          const scrollTrigger: ScrollTrigger.Vars = { trigger: el, start: 'top 88%', once: true };
-          // Mark the element done first, so the CSS "hidden" rule stops matching, then drop inline styles
-          // (lets CSS hover transforms work again afterwards).
-          const finish = (targets: gsap.TweenTarget, props: string) => () => {
-            el.dataset.reveal = 'done';
-            gsap.set(targets, { clearProps: props });
-          };
-          if (kind === 'lines') {
-            const inner = el.querySelectorAll('.mask-inner');
-            gsap.fromTo(inner, { yPercent: 108 }, { yPercent: 0, duration: 1.2, ease, stagger: 0.09, scrollTrigger, onComplete: finish(inner, 'transform') });
-          } else if (kind === 'image') {
-            gsap.fromTo(el, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease, scrollTrigger, onComplete: finish(el, 'clipPath') });
-            const img = el.querySelector('img');
-            if (img) gsap.fromTo(img, { scale: 1.08 }, { scale: 1, duration: 1.8, ease, scrollTrigger, onComplete: () => { gsap.set(img, { clearProps: 'transform' }); } });
-          } else if (kind === 'draw') {
-            gsap.fromTo(el, { scaleX: 0 }, { scaleX: 1, duration: 1.4, ease, scrollTrigger, onComplete: finish(el, 'transform') });
-          } else {
-            gsap.fromTo(el, { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 1.1, ease, scrollTrigger, onComplete: finish(el, 'transform,opacity') });
-          }
-        });
-
-        // Timeline threads: a gold line that fills with scroll progress through its parent.
-        gsap.utils.toArray<HTMLElement>('[data-thread]').forEach((el) => {
-          gsap.fromTo(el, { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: { trigger: el.parentElement || el, start: 'top 70%', end: 'bottom 70%', scrub: 0.6 } });
-        });
-
-        gsap.utils.toArray<HTMLElement>('[data-parallax]').forEach((el) => {
-          const amount = Number(el.dataset.parallax || 6);
-          gsap.fromTo(el, { yPercent: -amount }, { yPercent: amount, ease: 'none', scrollTrigger: { trigger: el.parentElement || el, start: 'top bottom', end: 'bottom top', scrub: true } });
-        });
+    // Threads: read every rect first, then write every transform, once per frame.
+    const threads = Array.from(document.querySelectorAll<HTMLElement>('[data-thread]'));
+    let frame = 0;
+    const updateThreads = () => {
+      frame = 0;
+      const vh = window.innerHeight * 0.7;
+      const values = threads.map((t) => {
+        const r = (t.parentElement || t).getBoundingClientRect();
+        return Math.min(1, Math.max(0, (vh - r.top) / (r.height || 1)));
       });
-      root.classList.add('motion-ready');
-      ScrollTrigger.refresh();
-    });
-
-    const onLoad = () => ScrollTrigger.refresh();
-    window.addEventListener('load', onLoad, { once: true });
+      threads.forEach((t, i) => (t.style.transform = `scaleY(${values[i]})`));
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(updateThreads);
+    };
+    if (threads.length) {
+      if (prefersReducedMotion()) threads.forEach((t) => (t.style.transform = 'none'));
+      else {
+        updateThreads();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+      }
+    }
 
     return () => {
-      cancelled = true;
-      window.removeEventListener('load', onLoad);
-      ctx?.revert();
+      io?.disconnect();
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+      if (frame) cancelAnimationFrame(frame);
     };
   }, [pathname]);
 

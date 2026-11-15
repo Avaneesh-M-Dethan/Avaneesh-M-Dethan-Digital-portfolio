@@ -66,7 +66,7 @@ export function CaseStudy({ project, back, next }: Props) {
       {/* Cover */}
       {project.cover ? (
         <div className="shell">
-          <Img image={project.cover} priority reveal={false} sizes="(min-width: 1440px) 1300px, 100vw" className={`intro-fade ${isPhone(project) ? 'mx-auto max-w-[520px]' : ''}`} />
+          <Img image={project.cover} priority reveal={false} sizes="(min-width: 1440px) 1300px, 100vw" className={isPhone(project) ? 'mx-auto max-w-[520px]' : ''} />
         </div>
       ) : project.coverType ? (
         <div className="shell">

@@ -89,11 +89,12 @@ export function Nav() {
         }`}
       >
         <nav aria-label="Main" className="shell flex h-[var(--nav-h)] items-center justify-between">
-          <Link href="/" className="group flex items-baseline gap-3" aria-label={`${profile.name}, home`}>
-            <span className="display text-[1.35rem] leading-none tracking-tight">
+          <Link href="/" className="group flex items-baseline gap-3">
+            <span aria-hidden="true" className="display text-[1.35rem] leading-none tracking-tight">
               A<em className="accent-gold">.</em>M<em className="accent-gold">.</em>D
             </span>
-            <span className="mono faint hidden transition-colors group-hover:text-bone sm:inline">{profile.name}</span>
+            <span className="mono faint sr-only transition-colors group-hover:text-bone sm:not-sr-only">{profile.name}</span>
+            <span className="sr-only">, home</span>
           </Link>
 
           <ul className="hidden items-center gap-8 md:flex">

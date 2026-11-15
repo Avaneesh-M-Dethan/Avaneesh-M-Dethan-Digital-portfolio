@@ -6,7 +6,7 @@
   --color-charcoal: #1b1b1b;
   --color-bone: #eae7df;
   --color-gold: #b9a16a;
-  --color-gold-deep: #7d6838;
+  --color-gold-deep: #6b5829;
   --color-grey: #888888;
   --color-paper-ink: #1c1a16;
 
@@ -32,7 +32,7 @@
   --dim: var(--text-dim); --faint: var(--text-faint); --accent: var(--color-gold); --st-live: #9cc4a3; --st-exp: #b3bdd1;
 
   /* Fluid type scale */
-  --fs-hero: clamp(3.4rem, 15vw, 15rem);
+  --fs-hero: clamp(3.4rem, 15vw, 13.5rem);
   --fs-h1: clamp(2.6rem, 6.4vw, 6rem);
   --fs-h2: clamp(2.2rem, 5vw, 4.5rem);
   --fs-h3: clamp(1.7rem, 3vw, 2.6rem);
@@ -195,13 +195,23 @@
 .scroll-cue { animation: scroll-cue 2.4s var(--ease-in-out-soft) infinite; }
 
 /* Scroll reveals: hidden only after JS confirms it will run them (see app/layout.tsx). */
-.js-motion [data-reveal='fade'] { opacity: 0; transform: translate3d(0, 28px, 0); }
-.js-motion [data-reveal='lines'] .mask-inner { transform: translate3d(0, 108%, 0); }
-.js-motion [data-reveal='image'] { clip-path: inset(100% 0 0 0); }
-.js-motion [data-reveal='draw'] { transform: scaleX(0); transform-origin: left; }
+/* MotionProvider adds [data-shown] when an element enters the viewport; CSS transitions do the rest. */
+[data-reveal='fade'] { transition: opacity 1.1s var(--ease-out-expo), transform 1.1s var(--ease-out-expo); }
+[data-reveal='lines'] .mask-inner { transition: transform 1.2s var(--ease-out-expo); }
+[data-reveal='lines'] .mask:nth-child(2) .mask-inner { transition-delay: 0.09s; }
+[data-reveal='lines'] .mask:nth-child(3) .mask-inner { transition-delay: 0.18s; }
+/* Image reveals clip the inner <img>, never the observed frame (a clipped frame is invisible to IntersectionObserver). */
+[data-reveal='image'] img { transition: clip-path 1.4s var(--ease-out-expo), transform 1.8s var(--ease-out-expo); }
+[data-reveal='draw'] { transform-origin: left; transition: transform 1.4s var(--ease-out-expo); }
+
+.js-motion [data-reveal='fade']:not([data-shown]) { opacity: 0; transform: translate3d(0, 28px, 0); }
+.js-motion [data-reveal='lines']:not([data-shown]) .mask-inner { transform: translate3d(0, 108%, 0); }
+.js-motion [data-reveal='image']:not([data-shown]) img { clip-path: inset(100% 0 0 0); transform: scale(1.08); }
+.js-motion [data-reveal='draw']:not([data-shown]) { transform: scaleX(0); }
 /* Failsafe: if the reveal controller never starts, show everything. */
 .js-motion.motion-failsafe:not(.motion-ready) [data-reveal],
-.js-motion.motion-failsafe:not(.motion-ready) [data-reveal] .mask-inner {
+.js-motion.motion-failsafe:not(.motion-ready) [data-reveal] .mask-inner,
+.js-motion.motion-failsafe:not(.motion-ready) [data-reveal] img {
   opacity: 1 !important; transform: none !important; clip-path: none !important;
 }
 
@@ -210,5 +220,5 @@
     animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important; scroll-behavior: auto !important;
   }
-  [data-reveal], [data-reveal] .mask-inner { opacity: 1 !important; transform: none !important; clip-path: none !important; }
+  [data-reveal], [data-reveal] .mask-inner, [data-reveal] img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
 }
