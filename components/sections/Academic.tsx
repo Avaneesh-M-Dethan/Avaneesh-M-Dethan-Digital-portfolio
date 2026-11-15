@@ -1,4 +1,4 @@
-import { academicIntro, courses, workingGroup } from '@/content/academic';
+import { academicIntro, courses, curriculum, workingGroup } from '@/content/academic';
 import type { Project } from '@/content/types';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Status } from '@/components/ui/Status';
@@ -22,7 +22,40 @@ export function Academic() {
           <p className="mono faint max-w-[60ch] lg:text-right">{workingGroup}</p>
         </div>
 
-        <div className="mt-[clamp(56px,8vw,112px)] flex flex-col gap-[clamp(72px,9vw,128px)]">
+        {/* Curriculum: every subject, with a jump to its projects where there are any */}
+        <div className="mt-[clamp(56px,8vw,112px)]" data-reveal="fade">
+          <div className="flex items-center gap-4">
+            <span className="mono accent-gold">{curriculum.label}</span>
+            <span className="hairline h-px flex-1 border-t" />
+            <span className="mono faint">{curriculum.note}</span>
+          </div>
+          <ul className="mt-8 grid border-l border-t border-[var(--line)] sm:grid-cols-2 lg:grid-cols-3">
+            {curriculum.courses.map((c) => {
+              const inner = (
+                <>
+                  <span className="mono accent-gold min-h-[1.1em]">{c.code ?? ''}</span>
+                  <span className="display mt-3 block text-[1.6rem] leading-tight">{c.name}</span>
+                  {c.href ? (
+                    <span className="mono faint mt-auto inline-flex items-center gap-2 pt-6 transition-colors duration-500 group-hover:text-[var(--accent)]">
+                      See the projects <Arrow />
+                    </span>
+                  ) : null}
+                </>
+              );
+              return (
+                <li key={c.name} className="border-b border-r border-[var(--line)]">
+                  {c.href ? (
+                    <a href={c.href} className="group flex h-full min-h-[150px] flex-col p-6 transition-colors duration-500 hover:bg-[var(--panel)]">{inner}</a>
+                  ) : (
+                    <div className="flex h-full min-h-[150px] flex-col p-6">{inner}</div>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div className="mt-[clamp(72px,9vw,128px)] flex flex-col gap-[clamp(72px,9vw,128px)]">
           {courses.map((course) => (
             <article key={course.code} className="grid grid-cols-12 gap-x-6 gap-y-10" aria-labelledby={`course-${course.code}`}>
               <header className="col-span-12 lg:col-span-3">

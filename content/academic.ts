@@ -6,6 +6,20 @@ export const academicIntro = {
   folder: { label: 'All project files on Google Drive', href: 'https://drive.google.com/drive/folders/1c2tW-soLI_EIWcQe6QoFctKzgAXXtS5u' },
 };
 
+/** The subjects I'm studying. Courses with projects link to them further down the page. */
+export const curriculum = {
+  label: 'Curriculum',
+  note: "The subjects I'm studying",
+  courses: [
+    { code: 'TLM', name: 'Technology Literacy for Managers', href: '#course-TLM' },
+    { code: 'ACC', name: 'Basics of Accounting', href: '#course-ACC' },
+    { code: 'LLR', name: 'Language, Literature and Rhetoric', href: '#course-LLR' },
+    { name: 'Mathematics' },
+    { name: 'Excel and Power BI' },
+    { code: 'DIR', name: 'Diversity, Inclusivity and Rootedness', href: '#course-DIR' },
+  ] as { code?: string; name: string; href?: string }[],
+};
+
 const done = { label: 'Completed', tone: 'done' } as const;
 const drive = (id: string, label = 'View the deck on Google Drive') => ({ label, href: `https://drive.google.com/file/d/${id}/view` });
 
@@ -183,7 +197,7 @@ const eternal: Project = {
   index: 'ACC · 01',
   title: 'Eternal Limited: the Accounting Cycle',
   subtitle: 'From opening balances to the balance sheet',
-  category: 'Accounting',
+  category: 'Basics of Accounting',
   status: done,
   summary: 'The full accounting cycle for Eternal Limited (formerly Zomato), from journal entries and ledgers to trial balances and financial statements.',
   authorship: 'Group project',
@@ -206,7 +220,7 @@ export const courses: Course[] = [
   { code: 'LLR', name: 'Language, Literature and Rhetoric', intro: 'How language persuades, and how people and brands present themselves.', projects: [rhetoricalAnalysis, rebrandingNayar] },
   { code: 'DIR', name: 'Diversity, Inclusivity and Rootedness', intro: 'A closer look at society, policy and culture.', projects: [healthIndia, aiAndArt] },
   { code: 'TLM', name: 'Technology Literacy for Managers', intro: 'Technology from a manager’s point of view. What it changes, and what it doesn’t.', projects: [aiChips, genAiFinance, angadi] },
-  { code: 'ACC', name: 'Accounting', intro: 'The full accounting cycle, worked through on a real company’s books.', projects: [eternal] },
+  { code: 'ACC', name: 'Basics of Accounting', intro: 'The full accounting cycle, worked through on a real company’s books.', projects: [eternal] },
 ];
 
 export const academicProjects = courses.flatMap((c) => c.projects);

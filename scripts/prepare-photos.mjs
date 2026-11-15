@@ -44,3 +44,8 @@ await save(sharp(path.join(src, '6.png')).extract({ left: 0, top: 0, width: 608,
 
 // 7. Quoin live hero (supplied screenshot): trim the browser bar (8px) and scrollbar (10px).
 await save(sharp(path.join(src, '7.png')).extract({ left: 0, top: 8, width: 1900, height: 865 }), 'projects/quoin/quoin-live-hero.png');
+
+// 8. TMUN Secretary General announcement poster.
+await save(sharp(path.join(src, '8.png')).jpeg({ quality: 90 }), 'personal/tmun-secretary-general.jpg');
+// 9. On stage at GLC.
+await save(sharp(path.join(src, '9.png')).jpeg({ quality: 90 }), 'personal/glc-stage.jpg');

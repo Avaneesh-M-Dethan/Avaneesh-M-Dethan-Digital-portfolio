@@ -20,7 +20,7 @@ The current Quoin code on your laptop has already removed all of these. Redeploy
 | What | Where it goes | File to edit |
 |---|---|---|
 | Your school's name and years | Timeline | `content/education.ts` |
-| Year you were Blue House Captain | Timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
+| Year you were house captain | Timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
 | TMUN year | Timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
 | Start year of your BBA | Timeline | `content/education.ts` |
 | Your second Best Delegate conference (SarvoMUN 2K24 is shown from the trophy photo) | Leadership → MUN | `content/leadership.ts` |
@@ -28,7 +28,8 @@ The current Quoin code on your laptop has already removed all of these. Redeploy
 | Full name of GLC and your role in it (only if you want it shown) | Leadership → Placement committee | `content/leadership.ts` |
 | Your LinkedIn URL | Connect | `content/social.ts` |
 | The final website address, once you have one | SEO and share previews | `content/profile.ts` (`siteUrl`) |
-| The real name of the course behind the Eternal Limited project | Academic → "Accounting" folio | `content/academic.ts` |
+| Confirm Eternal Limited belongs to Basics of Accounting (taken from your timetable) | Academic → ACC folio | `content/academic.ts` |
+| Full course names for Mathematics and Excel and Power BI, if they differ | Academic → Curriculum | `content/academic.ts` |
 
 ## 3. Links still missing
 
@@ -49,9 +50,8 @@ Every academic deck credits Working Group 1. The site says "Group project" and c
 
 ## 5. Photographs
 
-Three are placed: the speaking photo in About, the SarvoMUN Best Delegate photo under MUN, and the "Let’s Talk" portrait in Connect. More would help in two places:
+Five are placed: the speaking photo in About, the SarvoMUN Best Delegate photo under MUN, the TMUN Secretary General card, the GLC stage photo under the committee, and the "Let’s Talk" portrait in Connect. More would help in two places:
 
-- **TMUN**: a photo from the conference you led.
 - **Beyond the work**: up to four photos (sports, travel).
 
 Put them in `assets-src/personal/`, run `npm run images`, and send me the filenames.

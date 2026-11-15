@@ -5,6 +5,15 @@ import { Status } from '@/components/ui/Status';
 import { Todo } from '@/components/ui/Todo';
 import { Img } from '@/components/ui/Img';
 import { AwardMark } from '@/components/ui/AwardMark';
+import { getImage } from '@/lib/images';
+import type { ImageRef } from '@/content/types';
+
+// One landscape photo gets more width than one portrait photo; several photos share a grid.
+function photoLayout(photos: ImageRef[]) {
+  if (photos.length > 1) return 'sm:grid-cols-2';
+  const e = getImage(photos[0].key);
+  return e && e.width > e.height ? 'max-w-[640px]' : 'max-w-[360px]';
+}
 
 export function Leadership() {
   return (
@@ -65,7 +74,7 @@ function Entry({ entry }: { entry: LeadershipEntry }) {
         </ul>
 
         {entry.photos?.length ? (
-          <div className={`mt-10 grid gap-4 ${entry.photos.length > 1 ? "sm:grid-cols-2" : "max-w-[360px]"}`}>
+          <div className={`mt-10 grid gap-4 ${photoLayout(entry.photos)}`}>
             {entry.photos.map((ph) => (
               <figure key={ph.key}>
                 <Img image={ph} sizes="(min-width: 768px) 33vw, 100vw" />

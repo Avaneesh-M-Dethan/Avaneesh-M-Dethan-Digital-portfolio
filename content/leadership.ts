@@ -9,10 +9,10 @@ export const leadership: LeadershipEntry[] = [
   {
     id: 'house-captain',
     marker: 'A',
-    role: 'Blue House Captain',
+    role: 'House Captain',
     organisation: 'School, Thiruvananthapuram',
     body: [
-      'I was captain of Blue House at school. In practice that meant picking teams for events, getting people to actually sign up, and representing the house.',
+      'I was a house captain at school. In practice that meant picking teams for events, getting people to actually sign up, and representing the house.',
     ],
     themes: ['Student leadership', 'Responsibility', 'Team coordination', 'School activities'],
     todo: ['Year you were captain', 'A photo from your house-captain year, if you have one'],
@@ -48,10 +48,14 @@ export const leadership: LeadershipEntry[] = [
       'At TMUN I was Secretary General, so the organising side was on me. That meant planning the conference, working with the organising team, handing out responsibilities and making sure it all came together on the day.'
     ],
     themes: ['Conference organisation', 'Team leadership', 'Delegation', 'Event execution'],
-    todo: [
-      'TMUN edition(s) and year',
-      'Event photographs (the stage photo with the organising group, once its context is confirmed)',
+    photos: [
+      {
+        key: 'personal/tmun-secretary-general',
+        alt: 'A blue TMUN announcement card with a circular photo of Avaneesh holding a microphone, his name and the title "Secretary General" in yellow, and the conference emblem of a tea glass inside a laurel wreath.',
+        caption: 'Announced as Secretary General, TMUN',
+      },
     ],
+    todo: ['TMUN edition(s) and year'],
   },
   {
     id: 'pcec',
@@ -64,6 +68,13 @@ export const leadership: LeadershipEntry[] = [
       "I'll leave the placement details with the committee.",
     ],
     themes: ['Corporate outreach', 'Research', 'Event support', 'Placements (ongoing)'],
+    photos: [
+      {
+        key: 'personal/glc-stage',
+        alt: 'Avaneesh in a dark suit on stage with four others in front of a pink event backdrop and sponsor banner, holding a framed gift and a gift bag.',
+        caption: 'On stage at GLC',
+      },
+    ],
     todo: ['Full name of GLC and your specific role in it, if you want it shown'],
   },
 ];

@@ -16,12 +16,12 @@ export const education: TimelineEntry[] = [
     todo: ['School name', 'School years (e.g. 2014 to 2026)'],
   },
   {
-    title: 'Blue House Captain',
+    title: 'House Captain',
     place: 'School',
-    body: 'Captained Blue House through school events and activities.',
+    body: 'Captained my house through school events and activities.',
     href: '#house-captain',
     linkLabel: 'Read more',
-    todo: ['Year you were Blue House Captain'],
+    todo: ['Year you were house captain'],
   },
   {
     title: 'Secretary General, TMUN',

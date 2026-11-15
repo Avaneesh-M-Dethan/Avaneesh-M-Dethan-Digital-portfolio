@@ -6,6 +6,13 @@
     "srcSet": "/images/personal/best-delegate-sarvomun-2024-640.webp 640w, /images/personal/best-delegate-sarvomun-2024-768.webp 768w",
     "blur": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoQABUAPu1iqU2ppaOiMAgBMB2JYwC7IKnDMSlSUkhXuqZtWADeX7jihR5P55KlxPE9cdzMJzW7BC4E0bBozasG+JG49zlG6ajRyjUgyyz2yvF4hKvrSYeHmmP5p+fvW6BanPmdleesCb037OeDkR8H4bBqHS57z+Az5RqaJSJcNzBV+AHqN2it/78ehgTAAAA="
   },
+  "personal/glc-stage": {
+    "width": 1280,
+    "height": 851,
+    "src": "/images/personal/glc-stage-1280.webp",
+    "srcSet": "/images/personal/glc-stage-640.webp 640w, /images/personal/glc-stage-1080.webp 1080w, /images/personal/glc-stage-1280.webp 1280w",
+    "blur": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQAgCdASoQAAsAA4BaJbACdAYuvVnw4OU3mVgA/qlEvmCkCPZDz+zdF9VbxH3nvYQeLF8aYOW1kxEh+YdA7KGlVdqqrLxzn8H4tXtWVNyO8jnGpU+3rgIh4HdLIYhRlTqj4aUD0yw5Ia3zUpQMAA=="
+  },
   "personal/portrait-lets-talk": {
     "width": 1200,
     "height": 1600,
@@ -19,6 +26,13 @@
     "src": "/images/personal/speaking-mun-608.webp",
     "srcSet": "/images/personal/speaking-mun-608.webp 608w",
     "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoQABIAPu1iqU2ppaOiMAgBMB2JQBWABF2/zg2wmiVWTwH4AP7yq8vtyAQGZ7c/P/zGMyXbaD26O+1ei2EVzIxBRNqJ6UK905r7X1qlpFhmu+2FokDtJbZgf0AAAA=="
+  },
+  "personal/tmun-secretary-general": {
+    "width": 1206,
+    "height": 1507,
+    "src": "/images/personal/tmun-secretary-general-1206.webp",
+    "srcSet": "/images/personal/tmun-secretary-general-640.webp 640w, /images/personal/tmun-secretary-general-1080.webp 1080w, /images/personal/tmun-secretary-general-1206.webp 1206w",
+    "blur": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAABwBACdASoQABQAPu1iqU2ppaOiMAgBMB2JbACdMoRwFf/gK2VklzCliKqKwAD+y/vW+LTK21waqJxzOtvVIvx7jLYus4R8jiIXR/vrWQTNc5ROGYBWMLe8cZTy/cbNPeTYZ4gDfedT7B2gkPj8IXY2atySmhk9MqOy3PtoX2W7bUGNVjSMAA=="
   },
   "projects/angadi/angadi-approval-guardrail": {
     "width": 1082,
