@@ -5,7 +5,7 @@ export const beyond = {
   body: 'Courts, pools, committee rooms and whatever I happen to be curious about that month.',
   mun: {
     title: 'Model United Nations',
-    body: 'Away from the organising desk, MUN has been a long-running interest of mine. I have debated as a delegate at conferences and won Best Delegate twice.',
+    body: 'Away from the organising desk, MUN is also something I simply enjoy. I have debated as a delegate at conferences and won Best Delegate twice.',
     awardCount: 2,
   },
   sportsLabel: 'Sports and training',

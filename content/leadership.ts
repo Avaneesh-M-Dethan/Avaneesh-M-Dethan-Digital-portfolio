@@ -2,7 +2,7 @@ import type { LeadershipEntry } from './types';
 
 export const leadershipIntro = {
   heading: { lead: 'Taking initiative.', accent: 'Making things happen.' },
-  body: 'Four roles, from a school house to a college committee. Each one asked me to organise people, not just show up.',
+  body: 'Four roles, from a school house to a college committee: leading a house, debating in committee, running a conference and supporting placements.',
 };
 
 export const leadership: LeadershipEntry[] = [

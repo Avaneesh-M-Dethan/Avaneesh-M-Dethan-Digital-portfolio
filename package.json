@@ -3,14 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "clean": "node -e \"require('fs').rmSync('.next',{recursive:true,force:true})\"",
+    "predev": "npm run clean",
     "dev": "next dev -p 3010",
+    "prebuild": "npm run clean",
     "build": "next build",
     "start": "npx serve out -l 3011",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "images": "node scripts/optimize-images.mjs",
     "qa": "node scripts/qa.mjs",
-    "lighthouse": "node scripts/lighthouse.mjs"
+    "lighthouse": "node scripts/lighthouse.mjs",
+    "og": "node scripts/og-image.mjs"
   },
   "dependencies": {
     "lenis": "^1.3.27",

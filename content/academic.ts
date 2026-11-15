@@ -2,7 +2,7 @@ import type { Course, Project } from './types';
 
 export const academicIntro = {
   heading: { lead: 'Exploring ideas', accent: 'beyond the classroom.' },
-  body: 'Seven projects across three courses. Each is labelled as individual or group work, and the case studies quote the work itself.',
+  body: 'Seven projects across three courses. Group work is marked as group work, and the case studies quote the work itself.',
 };
 
 /** Shown on rows whose material has not been added yet. */
