@@ -5,11 +5,11 @@ export const nextChapter = {
   exploringLabel: 'Currently exploring',
   exploring: [
     { topic: 'AI agents', note: 'How much an agent should do on its own, and where a person has to step in. Angadi and Jarvis are where I test this.' },
-    { topic: 'Business automation', note: 'Getting the boring follow-ups to run themselves.' },
+    { topic: 'Business automation', note: 'Getting the boring replies and reminders to send themselves.' },
     { topic: 'Performance marketing', note: 'Meta ads, testing creative, and working out what actually moves revenue. Quoin is where I try it.' },
     { topic: 'SaaS products', note: 'Which small, annoying problems are worth building a product around.' },
     { topic: 'Emerging technology', note: 'The hardware and platforms under AI, and who gets to control them.' },
-    { topic: 'Entrepreneurship', note: 'Getting Quoin from pre-launch to its first real client.' },
+    { topic: 'Entrepreneurship', note: 'Getting Quoin to its first real client.' },
   ],
   skillsLabel: "Skills I'm working on",
   skills: [

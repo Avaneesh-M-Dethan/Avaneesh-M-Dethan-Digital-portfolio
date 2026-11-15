@@ -43,7 +43,7 @@ export const leadership: LeadershipEntry[] = [
     id: 'tmun',
     marker: 'C',
     role: 'Secretary General',
-    organisation: 'Trivandrum Model United Nations (TMUN)',
+    organisation: 'Trivandrum Model United Nations, TMUN',
     body: [
       'At TMUN I was Secretary General, so the organising side was on me. That meant planning the conference, working with the organising team, handing out responsibilities and making sure it all came together on the day.'
     ],

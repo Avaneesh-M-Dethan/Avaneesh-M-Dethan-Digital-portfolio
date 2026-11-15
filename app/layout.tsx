@@ -42,7 +42,7 @@ const mono = localFont({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: profile.siteTitle, template: `%s — ${profile.name}` },
+  title: { default: profile.siteTitle, template: `%s | ${profile.name}` },
   description: profile.siteDescription,
   authors: [{ name: profile.name }],
   creator: profile.name,
@@ -75,7 +75,7 @@ const personJsonLd = {
   description: profile.siteDescription,
   homeLocation: { '@type': 'Place', name: 'Thiruvananthapuram, Kerala, India' },
   affiliation: { '@type': 'CollegeOrUniversity', name: 'T A Pai Management Institute, Bengaluru' },
-  sameAs: contact.links.filter((l) => l.href && l.href.includes('github')).map((l) => l.href),
+  sameAs: contact.links.filter((l) => l.href && l.href.includes('linkedin')).map((l) => l.href),
 };
 
 // Runs before first paint: enables scroll reveals only when motion is allowed,

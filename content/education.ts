@@ -35,7 +35,7 @@ export const education: TimelineEntry[] = [
     period: '2026',
     title: 'Founded Quoin',
     place: 'Marketing studio',
-    body: 'Started a Meta ads studio for founder-led brands and built its brand and website.',
+    body: 'Started a Meta ads studio for brands run by their founders, and built its brand and website.',
     href: '#quoin',
     linkLabel: 'See the project',
   },

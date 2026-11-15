@@ -52,6 +52,12 @@ Save the deck as a PDF into `public/files/` with the exact name listed in `CONTE
 
 After the first setup, every change you push to GitHub goes live automatically within about a minute.
 
+## Make a PDF to upload or share
+
+1. Run `npm run build`, then `npm start` and leave it running.
+2. In a second terminal, run `npm run share`.
+3. Two files appear in the `deliverables` folder: `Avaneesh-M-Dethan-Portfolio.pdf`, one long page that looks like the site with working links, and `portfolio-copy.txt`, all the text, ready to paste into an AI checker such as ZeroGPT.
+
 ## Check quality before publishing
 
 ```bash

@@ -15,9 +15,9 @@ export const profile = {
   /** Add an editorial portrait: drop it in assets-src/personal/, run `npm run images`, then set the key here. */
   portrait: null as ImageRef | null,
 
-  siteTitle: 'Avaneesh M Dethan — Student, builder, curious by nature',
+  siteTitle: 'Avaneesh M Dethan | Student, builder, curious by nature',
   siteDescription:
-    'The portfolio of Avaneesh M Dethan, a BBA student at TAPMI Bengaluru: leadership, the things he has built, academic projects and what he is exploring next.',
+    'The portfolio of Avaneesh M Dethan, a BBA student at TAPMI Bengaluru. Leadership, the things he has built, academic projects and what he is exploring next.',
   siteUrl: 'https://avaneesh-portfolio.netlify.app',
   location: 'Bengaluru, India',
 };

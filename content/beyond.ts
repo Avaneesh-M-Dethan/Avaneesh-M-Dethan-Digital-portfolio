@@ -10,11 +10,10 @@ export const beyond = {
   },
   sportsLabel: 'Sports and training',
   sports: [
-    { name: 'Badminton', tag: 'Court' },
+    { name: 'Badminton', tag: 'Racket sports' },
     { name: 'Swimming', tag: 'Pool' },
-    { name: 'Cricket', tag: 'Field' },
+    { name: 'Cricket', tag: 'Bowling' },
     { name: 'Strength training', tag: 'Gym' },
-    { name: 'Running', tag: 'Road' },
   ],
   interestsLabel: 'Other interests',
   interests: [

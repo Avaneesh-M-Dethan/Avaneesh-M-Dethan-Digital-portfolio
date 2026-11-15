@@ -24,13 +24,13 @@ const done = { label: 'Completed', tone: 'done' } as const;
 const drive = (id: string, label = 'View the deck on Google Drive') => ({ label, href: `https://drive.google.com/file/d/${id}/view` });
 
 /** Every deck lists the same five members. */
-export const workingGroup = 'Working Group 1: Anushka Rajgor, Krishna Moorari, Prragyaa Mishra, Rishima Agrawal and me';
+export const workingGroup = 'All made with my working group, Anushka Rajgor, Krishna Moorari, Prragyaa Mishra and Rishima Agrawal.';
 
 const rhetoricalAnalysis: Project = {
   slug: 'rhetorical-analysis',
   index: 'LLR · 01',
   title: 'Rhetorical Analysis',
-  subtitle: 'Brand the Persona: Falguni Nayar and Nykaa',
+  subtitle: 'Brand the Persona, a study of Falguni Nayar and Nykaa',
   category: 'Language, Literature and Rhetoric',
   status: done,
   summary: 'How a business leader builds a personal brand through the way she speaks, using Falguni Nayar and Nykaa.',
@@ -39,12 +39,12 @@ const rhetoricalAnalysis: Project = {
   did: [
     'Analysed Falguni Nayar’s speeches, interviews and Nykaa’s ads for ethos, pathos, logos and kairos.',
     'Broke down her IIM Ahmedabad convocation address with SOAPS and the rhetorical triangle.',
-    'Found that ethos was her strongest appeal: her own career backs up her advice.',
+    'Found that ethos was her strongest appeal, because her own career backs up her advice.',
   ],
   learnt: [
-    'How to use SOAPS and the rhetorical triangle on a real speech.',
-    'How leaders build a personal brand through the way they speak.',
-    'How to spot devices like allusion, anecdote and antithesis.',
+    'Using SOAPS and the rhetorical triangle on an actual speech.',
+    'A leader’s personal brand is built a lot through the way they speak.',
+    'Spotting devices like allusion, anecdote and antithesis when I hear them.',
   ],
   links: [drive('1-L50DT3pDdz4cJ_hEBvGKQzSKMozZqrf')],
 };
@@ -62,11 +62,11 @@ const rebrandingNayar: Project = {
   did: [
     'Proposed repositioning her as “The Reinvention Mentor”.',
     'Came up with content ideas like Founder’s Field Notes and Ask Falguni.',
-    'Sketched a refreshed Nykaa brand and in-store experience around “Beauty that belongs to you”.',
+    'Sketched a fresh Nykaa brand and store experience around the line “Beauty that belongs to you”.',
   ],
   learnt: [
-    'How to turn a rhetorical analysis into a brand strategy.',
-    'How a brand promise has to show up in the product and the experience, not just the tagline.',
+    'Turning an analysis into an actual brand strategy.',
+    'A brand promise only works if it shows up in the product and the experience too.',
   ],
   links: [drive('1MB_d-DSY-wJRExFCbO8-_lipPNC-3icZ')],
   note: 'A concept made for a class project, not a claim about her current brand or Nykaa’s plans.',
@@ -76,7 +76,7 @@ const healthIndia: Project = {
   slug: 'political-economic-influence-on-health',
   index: 'DIR · 01',
   title: 'Political and Economic Influence on Health in India',
-  subtitle: 'Health is political: who gets to be well?',
+  subtitle: 'Health is political. Who gets to be well?',
   category: 'Diversity, Inclusivity and Rootedness',
   status: done,
   summary: 'An anthropological look at how money, policy and social position shape who stays healthy in India.',
@@ -84,13 +84,13 @@ const healthIndia: Project = {
   tier: 'index',
   did: [
     'Looked at how money, policy and social position shape health in India.',
-    'Compared who pays for healthcare: households paid 64.2% of health spending in 2013–14 and 43.4% in 2022–23.',
+    'Compared who pays for healthcare. Households paid 64.2% of health spending in 2013–14, and 43.4% in 2022–23.',
     'Studied Haat Bazaar mobile clinics, Ayushman Arogya Mandirs and PM-JAY.',
   ],
   learnt: [
     'What the social determinants of health are.',
-    'Why insurance on its own does not fix access to care.',
-    'How to read public health data through an anthropological lens.',
+    'Insurance on its own doesn’t fix access to care.',
+    'Reading public health data with an anthropologist’s eye.',
   ],
   links: [drive('1x8f4EiAj2dj6cZUnvfmJwcezu04TPd6g')],
 };
@@ -99,7 +99,7 @@ const aiAndArt: Project = {
   slug: 'ai-and-art',
   index: 'DIR · 02',
   title: 'AI and Art',
-  subtitle: 'A short documentary: the people behind the ink',
+  subtitle: 'A short documentary about the people behind the ink',
   category: 'Diversity, Inclusivity and Rootedness',
   status: done,
   summary: 'A short documentary where we asked tattoo artists how AI is changing their craft, and whether it could ever replace them.',
@@ -110,8 +110,8 @@ const aiAndArt: Project = {
     'Asked how they use AI, what it saves them, and what it might take away.',
   ],
   learnt: [
-    'How to tell a story through interviews on film.',
-    'How working artists actually use AI: for quick references and saving time, not for the tattoo itself.',
+    'Telling a story through interviews on film.',
+    'What working artists actually use AI for. It gives them quick references and saves time, but it doesn’t do the tattoo.',
   ],
   links: [drive('1ld7C7AgaYxsryI6_hZ8O2EY61q9lWdoL', 'Watch the documentary on Google Drive')],
 };
@@ -120,7 +120,7 @@ const aiChips: Project = {
   slug: 'the-war-for-ai-chips',
   index: 'TLM · 01',
   title: 'The War for AI Chips',
-  subtitle: 'How the US–China rivalry is reshaping who can build AI',
+  subtitle: 'How the rivalry between the US and China is changing who can build AI',
   category: 'Technology Literacy for Managers',
   status: done,
   summary: 'The April 2025 export rule on Nvidia’s H20 chip, and what it means for companies, managers and India.',
@@ -128,13 +128,13 @@ const aiChips: Project = {
   tier: 'index',
   did: [
     'Studied the April 2025 US export rule on Nvidia’s H20 chip and its $4.5B charge.',
-    'Traced the knock-on effects from the chipmaker to cloud providers, AI companies and customers.',
+    'Traced how the effects spread from the chipmaker to cloud providers, AI companies and customers.',
     'Wrote recommendations for an Indian company building AI products.',
   ],
   learnt: [
-    'Why access to computing power is a strategic business risk.',
-    'How a single government decision can reshape a market.',
-    'How to read company filings like Nvidia’s Form 8-K.',
+    'Access to computing power is a real business risk now.',
+    'One government decision can reshape a whole market.',
+    'Reading company filings like Nvidia’s Form 8-K.',
   ],
   links: [drive('1qQoh44Q3QBR7A7-BXIZ-47XqI9ZArinH')],
 };
@@ -143,7 +143,7 @@ const genAiFinance: Project = {
   slug: 'generative-ai-in-finance',
   index: 'TLM · 02',
   title: 'Generative AI in Finance',
-  subtitle: 'Morgan Stanley: GenAI in the advisor workflow',
+  subtitle: 'How Morgan Stanley advisors use GenAI',
   category: 'Technology Literacy for Managers',
   status: done,
   summary: 'How Morgan Stanley Wealth Management uses GenAI before and after client meetings, and whether that is sustaining or disruptive.',
@@ -156,8 +156,8 @@ const genAiFinance: Project = {
   ],
   learnt: [
     'The difference between sustaining and disruptive innovation.',
-    'How to size the business value of an AI tool.',
-    'Why finance keeps a person approving everything the AI drafts.',
+    'Sizing up what an AI tool is actually worth to a business.',
+    'Why finance still has a person approve everything the AI drafts.',
   ],
   links: [drive('1wjifEH8CDuGHfDZYxXLRrjs0YJ-Xhk3n')],
 };
@@ -166,7 +166,7 @@ const angadi: Project = {
   slug: 'ai-marketing-automation',
   index: 'TLM · 03',
   title: 'AI Marketing Automation',
-  subtitle: 'Angadi: a festival marketing agent for kirana stores',
+  subtitle: 'Angadi, a festival marketing agent for kirana stores',
   category: 'Technology Literacy for Managers',
   status: { label: 'Working prototype', tone: 'ongoing' },
   summary: 'An AI agent that plans festival offers for a neighbourhood kirana store, designs bilingual WhatsApp posters, and sends nothing without the owner’s approval.',
@@ -175,45 +175,43 @@ const angadi: Project = {
   cover: {
     key: 'projects/angadi/angadi-approval-guardrail',
     alt: 'Angadi approval screen on a phone: a "Needs your decision" card explaining that a Kaju Katli offer failed the margin check, with a safer suggested offer. A Demo data badge is visible.',
-    caption: 'An offer blocked by the margin check. All figures are simulated.',
+    caption: 'An offer blocked by the margin check.',
   },
   did: [
-    'Built the working app: an AI agent that plans festival offers for a kirana store.',
+    'Built the working app, an AI agent that plans festival offers for a kirana store, and tested it on a demo store.',
     'Added 13 guardrail checks, Kannada and English posters, and an owner approval step.',
-    'Tested it with 216 unit and integration tests, 32 agent evaluations and 23 end-to-end tests.',
+    'Checked it with 216 unit and integration tests, 32 agent evaluations and 23 end to end tests.',
   ],
   learnt: [
-    'How retrieval (RAG) and the Model Context Protocol (MCP) fit together in a real app.',
-    'How to design AI that cannot act without a person’s approval.',
-    'How to build for people who work in Kannada.',
+    'How retrieval and the Model Context Protocol work together in a real app.',
+    'Designing AI that can’t act until a person approves.',
+    'Building for people who work in Kannada.',
   ],
   links: [],
-  note: 'Runs on a synthetic store. Every number in the app is simulated and labelled “Demo data”.',
   todo: ['Angadi: add a link (upload the course film to Drive, make the repo public, or deploy a demo)'],
 };
 
 const eternal: Project = {
   slug: 'eternal-limited-accounting',
   index: 'ACC · 01',
-  title: 'Eternal Limited: the Accounting Cycle',
+  title: 'The Accounting Cycle at Eternal Limited',
   subtitle: 'From opening balances to the balance sheet',
   category: 'Basics of Accounting',
   status: done,
-  summary: 'The full accounting cycle for Eternal Limited (formerly Zomato), from journal entries and ledgers to trial balances and financial statements.',
+  summary: 'The full accounting cycle for Eternal Limited, formerly Zomato, from journal entries and ledgers to trial balances and financial statements.',
   authorship: 'Group project',
   tier: 'index',
   did: [
-    'Worked through the full accounting cycle for Eternal Limited, using 30 transactions.',
+    'Worked through the full accounting cycle for Eternal Limited as a class simulation, using 30 hypothetical transactions.',
     'Presented the statement of changes in equity, the balance sheet and the final checks.',
-    'Confirmed the accounting equation: ₹35,852.06 crore of assets against equity plus liabilities.',
+    'Checked that the accounting equation balanced at ₹35,852.06 crore.',
   ],
   learnt: [
-    'Double-entry bookkeeping, from journal entries all the way to a balance sheet.',
-    'How year-end adjustments change the final numbers.',
-    'Why a balanced trial balance still does not prove there are no errors.',
+    'Double entry bookkeeping, all the way from journal entries to a balance sheet.',
+    'What the adjustments at year end do to the final numbers.',
+    'A balanced trial balance doesn’t prove there are no mistakes.',
   ],
   links: [drive('1fom36t7g8dJ0fF0nP94sjVapzmVzjm6I', 'View the report and balance sheet on Google Drive')],
-  note: 'An academic simulation built on Eternal’s opening balances, not the company’s actual results.',
 };
 
 export const courses: Course[] = [

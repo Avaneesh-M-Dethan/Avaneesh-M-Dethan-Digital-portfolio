@@ -4,7 +4,6 @@ export const contact = {
   email: 'avaneeshmdethan@gmail.com',
   /** Leave a URL empty to hide that link. */
   links: [
-    { label: 'GitHub', href: 'https://github.com/Avaneesh-M-Dethan' },
     { label: 'LinkedIn', href: '' },
     { label: 'Quoin', href: 'https://quoin-tau.vercel.app' },
   ],

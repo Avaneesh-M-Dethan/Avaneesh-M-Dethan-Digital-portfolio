@@ -222,3 +222,20 @@
   }
   [data-reveal], [data-reveal] .mask-inner, [data-reveal='image'] img { opacity: 1 !important; transform: none !important; clip-path: none !important; }
 }
+
+/* ───────────── Print / PDF export ───────────── */
+/* A clean document: no fixed UI, every expandable row open, everything visible. */
+@media print {
+  header.fixed, aside[aria-hidden='true'], #mobile-menu, a[href='#main'], footer button { display: none !important; }
+  span.fixed { display: none !important; }
+  .expand { grid-template-rows: 1fr !important; }
+  [data-reveal], [data-reveal] .mask-inner, [data-reveal] img, .intro-rise, .intro-fade, .intro-draw {
+    opacity: 1 !important; transform: none !important; clip-path: none !important; animation: none !important;
+  }
+  li img[aria-hidden='true'] { display: none !important; }
+  .grain::after { display: none; }
+  .lg\:sticky { position: static !important; }
+  html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* Viewport units resolve to the page size in print, so pin the hero to a screen-like height. */
+  #intro { min-height: 860px !important; }
+}

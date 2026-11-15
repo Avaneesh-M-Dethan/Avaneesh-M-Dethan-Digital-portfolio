@@ -14,7 +14,8 @@
     "images": "node scripts/optimize-images.mjs",
     "qa": "node scripts/qa.mjs",
     "lighthouse": "node scripts/lighthouse.mjs",
-    "og": "node scripts/og-image.mjs"
+    "og": "node scripts/og-image.mjs",
+    "share": "node scripts/export-share.mjs"
   },
   "dependencies": {
     "lenis": "^1.3.27",
