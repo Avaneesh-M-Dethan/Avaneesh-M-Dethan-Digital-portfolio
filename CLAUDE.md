@@ -4,7 +4,7 @@ Inherits agency rules from `~/.claude/CLAUDE.md`. Project-specific overrides onl
 
 ## Project context
 - **Client:** Avaneesh M Dethan (self). BBA student, TAPMI Bengaluru.
-- **Type:** static personal portfolio, editorial storytelling, 8 chapters + case-study routes.
+- **Type:** static personal portfolio, editorial storytelling, 8 chapters on a single page. Projects show what I did and learnt, with links to Drive, live sites or GitHub.
 - **Stack:** Next.js 15 App Router, TypeScript strict, `output: 'export'`, Tailwind v4, GSAP + ScrollTrigger, Lenis.
 - **Deployment target:** Netlify or Vercel (static `out/`). Not deployed until Avaneesh says go.
 - **Status:** in-progress.

@@ -22,6 +22,8 @@ Change only the words between quote marks. Keep the quote marks and commas exact
 **To see your change:** run `npm run dev` and open http://localhost:3010. The page updates as soon as you save.
 
 **Handy switches:**
+- Every project has a `did` list (What I did) and a `learnt` list (What I learnt). Add, edit or remove lines there.
+- Academic projects link to Google Drive. To change a link, paste the new Drive file link into `links` in `content/academic.ts`.
 - Hide a project: add `hidden: true,` to it in `content/projects.ts`.
 - Leave a link empty (`href: ''`) and the button disappears.
 - To finish a placeholder, fill in the missing detail, then delete its `todo:` line.
@@ -59,4 +61,4 @@ npm run lint       # must show no problems
 
 ## Contact for changes
 
-For anything beyond text, images or links, such as a new section, a layout change or a new case study, open this folder in Claude Code and describe the change in plain words. `CLAUDE.md` in this folder holds the project rules, including the no-fabrication rule, so every session starts with the right context.
+For anything beyond text, images or links, such as a new section, a layout change or a new project, open this folder in Claude Code and describe the change in plain words. `CLAUDE.md` in this folder holds the project rules, including the no-fabrication rule, so every session starts with the right context.

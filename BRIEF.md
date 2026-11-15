@@ -13,12 +13,12 @@ Every claim on the site is grounded in real material: project repositories, deck
 2. **About**: a personal introduction, interests and an education timeline on a paper-toned panel.
 3. **Leadership**: Blue House Captain, MUN (two Best Delegate awards, marked with gold seals), TMUN Secretary General with the TMUN 2 registration flow, and the Placement and Corporate Engagement Committee (ongoing).
 4. **Built**: Quoin and Suminagashi as featured image cards, plus AI Automations, Jarvis and Registro Watcher as expandable rows.
-5. **Academic**: seven projects in three course folios (LLR, DIR, TLM). Three have full case studies.
+5. **Academic**: eight projects in four course folios (LLR, DIR, TLM, Accounting). Each shows what we did and what I learnt, with a link to the work on Google Drive.
 6. **Beyond the work**: sports, MUN as an interest, other interests.
 7. **The next chapter**: an interactive "Currently exploring" panel, the skills he is developing, and work in progress.
 8. **Connect**: email with copy-to-clipboard, GitHub and Quoin links.
 
-**Case-study pages:** Quoin, Suminagashi, Rhetorical Analysis, Generative AI in Finance, AI Marketing Automation (Angadi).
+**One page, no case studies:** every project shows "What I did" and "What I learnt" in place, with a link to the live site, GitHub or Google Drive.
 
 **Signature detail:** a chapter rail on the right edge. A thin gold thread fills as you read and names the current chapter in italic serif. On phones it becomes a one-pixel progress line under the navigation.
 

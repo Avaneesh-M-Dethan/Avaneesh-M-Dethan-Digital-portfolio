@@ -11,7 +11,17 @@ const OUT = 'public/images';
 const WIDTHS = [640, 1080, 1600];
 // Optional crops (left, top, width, height in source pixels), keyed by "<folder>/<name>".
 // Source files kept on disk but not published.
-const IGNORE = new Set(['projects/suminagashi/suminagashi-untouched']);
+const IGNORE = new Set([
+  'projects/suminagashi/suminagashi-untouched',
+  // Kept as source; only the removed case-study galleries used these.
+  'projects/quoin/quoin-cover',
+  'projects/quoin/quoin-identity',
+  'projects/quoin/quoin-services',
+  'projects/suminagashi/suminagashi-ink-detail',
+  'projects/suminagashi/studio-sumi-concept',
+  'projects/angadi/angadi-owner-home',
+  'projects/angadi/angadi-festival-poster',
+]);
 const CROPS = {
   'projects/angadi/angadi-owner-home': { left: 0, top: 0, width: 1082, height: 1870 },
   'projects/angadi/angadi-approval-guardrail': { left: 0, top: 0, width: 1082, height: 1960 },

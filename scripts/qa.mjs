@@ -6,7 +6,7 @@ import { mkdir } from 'node:fs/promises';
 
 const base = process.argv[2] || 'http://localhost:3011';
 const widths = (process.argv[3] || '1440,390').split(',').map(Number);
-const pages = (process.argv[4] || '/,/work/quoin/,/work/suminagashi/,/academic/rhetorical-analysis/,/academic/generative-ai-in-finance/,/academic/ai-marketing-automation/').split(',');
+const pages = (process.argv[4] || '/').split(',');
 const reduced = process.env.REDUCED === '1';
 await mkdir('qa-shots', { recursive: true });
 

@@ -26,7 +26,7 @@ export function Built() {
         <SectionHeader id="built-title" number="05" label="Entrepreneurship & things I've built" heading={builtIntro.heading} body={builtIntro.body} />
 
         <div className="mt-[clamp(64px,9vw,128px)] flex flex-col gap-[clamp(80px,10vw,140px)]">
-          {first ? <FeaturedCard project={first} href={`/work/${first.slug}/`} /> : null}
+          {first ? <FeaturedCard project={first} /> : null}
 
           {index.length ? (
             <div>
@@ -37,7 +37,7 @@ export function Built() {
               <ul className="hairline border-t">
                 {index.map((p: Project) => (
                   <IndexRow key={p.slug} index={p.index} title={p.title} category={p.category} summary={p.summary} status={p.status} preview={previewFor(p)}>
-                    {p.sections.length ? <ProjectDetails project={p} /> : undefined}
+                    {p.did.length ? <ProjectDetails project={p} /> : undefined}
                   </IndexRow>
                 ))}
               </ul>
@@ -45,7 +45,7 @@ export function Built() {
           ) : null}
 
           {rest.map((p, i) => (
-            <FeaturedCard key={p.slug} project={p} href={`/work/${p.slug}/`} flip={i % 2 === 0} />
+            <FeaturedCard key={p.slug} project={p} flip={i % 2 === 0} />
           ))}
         </div>
       </div>

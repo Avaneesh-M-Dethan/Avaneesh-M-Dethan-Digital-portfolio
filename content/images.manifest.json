@@ -27,20 +27,6 @@
     "srcSet": "/images/projects/angadi/angadi-approval-guardrail-640.webp 640w, /images/projects/angadi/angadi-approval-guardrail-1080.webp 1080w, /images/projects/angadi/angadi-approval-guardrail-1082.webp 1082w",
     "blur": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABQBACdASoQAB0APu1iqU2ppaOiMAgBMB2JZgCdMoAJ9Mg7ii3O+7KrAMsAAP786aYP4564/x9uREMI27JtEQFAkVNa6qBgaNqfiSKRGB/RfYtd6IRsjgz7Z17hMwxM2QqWam+fLpIzx3ibu5lovY67CF6py+/qeEp90i7yDpQhXl4ouzvF8VkhYAIUfeEU4AA="
   },
-  "projects/angadi/angadi-festival-poster": {
-    "width": 2835,
-    "height": 3544,
-    "src": "/images/projects/angadi/angadi-festival-poster-2000.webp",
-    "srcSet": "/images/projects/angadi/angadi-festival-poster-640.webp 640w, /images/projects/angadi/angadi-festival-poster-1080.webp 1080w, /images/projects/angadi/angadi-festival-poster-1600.webp 1600w, /images/projects/angadi/angadi-festival-poster-2000.webp 2000w",
-    "blur": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAQBACdASoQABQAPu1iqU2ppaOiMAgBMB2JZACdL1yBnTzj0JaX8+1SAAD+y8gcWfurRxOn2lYpb8zt4y1UxzLlOQiEddfxb7hSwUwnxQxZqRecHcAXEvK/9lfpLmjO9RIAAA=="
-  },
-  "projects/angadi/angadi-owner-home": {
-    "width": 1082,
-    "height": 1870,
-    "src": "/images/projects/angadi/angadi-owner-home-1082.webp",
-    "srcSet": "/images/projects/angadi/angadi-owner-home-640.webp 640w, /images/projects/angadi/angadi-owner-home-1080.webp 1080w, /images/projects/angadi/angadi-owner-home-1082.webp 1082w",
-    "blur": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAABQBACdASoQABwAPu1iqU2ppaOiMAgBMB2JbACdMoRwACndI5sPY3CyqwXoAP7qvUAhhTjVUTrOQ0rfirBuADLuBKloG/DAdqpJfSabcTNUAuGMxKxJDOwH4fsZTL/epx8v8DaUIFuCsbOuE4voxyz0x752/DMePNcifRbFkQNSr5Ppmt1Ry3rGuo40JBftKtH676FFpoJQcVoJGQQgAA=="
-  },
   "projects/automations/zapier-form-autoreply": {
     "width": 1907,
     "height": 872,
@@ -55,33 +41,12 @@
     "srcSet": "/images/projects/jarvis/jarvis-interface-640.webp 640w, /images/projects/jarvis/jarvis-interface-1080.webp 1080w, /images/projects/jarvis/jarvis-interface-1600.webp 1600w, /images/projects/jarvis/jarvis-interface-1900.webp 1900w",
     "blur": "data:image/webp;base64,UklGRi4AAABXRUJQVlA4ICIAAABQAQCdASoQAAcAA4BaJZwABDOAAP70WAbR5Lh2XsgBAAAA"
   },
-  "projects/quoin/quoin-cover": {
-    "width": 2400,
-    "height": 1500,
-    "src": "/images/projects/quoin/quoin-cover-2000.webp",
-    "srcSet": "/images/projects/quoin/quoin-cover-640.webp 640w, /images/projects/quoin/quoin-cover-1080.webp 1080w, /images/projects/quoin/quoin-cover-1600.webp 1600w, /images/projects/quoin/quoin-cover-2000.webp 2000w",
-    "blur": "data:image/webp;base64,UklGRj4AAABXRUJQVlA4IDIAAADwAQCdASoQAAoAA4BaJZwAAt0Dq08snxgA/vaZLCKS1pMXQIhubZnuxsMuqlFUcAAAAA=="
-  },
-  "projects/quoin/quoin-identity": {
-    "width": 2400,
-    "height": 1560,
-    "src": "/images/projects/quoin/quoin-identity-2000.webp",
-    "srcSet": "/images/projects/quoin/quoin-identity-640.webp 640w, /images/projects/quoin/quoin-identity-1080.webp 1080w, /images/projects/quoin/quoin-identity-1600.webp 1600w, /images/projects/quoin/quoin-identity-2000.webp 2000w",
-    "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAADQAQCdASoQAAoAA4BaJaQAAvensxFKAAD+9plS6g5pW54aEZB8fL3EAAA="
-  },
   "projects/quoin/quoin-live-hero": {
     "width": 1900,
     "height": 865,
     "src": "/images/projects/quoin/quoin-live-hero-1900.webp",
     "srcSet": "/images/projects/quoin/quoin-live-hero-640.webp 640w, /images/projects/quoin/quoin-live-hero-1080.webp 1080w, /images/projects/quoin/quoin-live-hero-1600.webp 1600w, /images/projects/quoin/quoin-live-hero-1900.webp 1900w",
     "blur": "data:image/webp;base64,UklGRjwAAABXRUJQVlA4IDAAAACwAQCdASoQAAcAA4BaJZwAAudg07cAAP722v1YkP/x2e+ByFkhNusDQYk1/OYAAAA="
-  },
-  "projects/quoin/quoin-services": {
-    "width": 2400,
-    "height": 1560,
-    "src": "/images/projects/quoin/quoin-services-2000.webp",
-    "srcSet": "/images/projects/quoin/quoin-services-640.webp 640w, /images/projects/quoin/quoin-services-1080.webp 1080w, /images/projects/quoin/quoin-services-1600.webp 1600w, /images/projects/quoin/quoin-services-2000.webp 2000w",
-    "blur": "data:image/webp;base64,UklGRjYAAABXRUJQVlA4ICoAAAAwAQCdASoQAAoAA4BaJaQAA3AA/vN37ZAX7ZFUkgXLMweEWab9ULkAAAA="
   },
   "projects/registro/registro-attendance": {
     "width": 818,
@@ -90,25 +55,11 @@
     "srcSet": "/images/projects/registro/registro-attendance-640.webp 640w, /images/projects/registro/registro-attendance-818.webp 818w",
     "blur": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADQAwCdASoQAB8APu1iqU2ppaOiMAgBMB2JZQAIEAMktcyxm5Dlu9gA/tzKtAeMSjtQPnfhePxCK486WG6qExco460Vafi56fVCEBkxChe5DRfDn33SaS4wpm4gnItWAyd463wFOnKxEYcO4BBr0Z3VvzL369dgf41P+voF7zU8J6PAAAA="
   },
-  "projects/suminagashi/studio-sumi-concept": {
-    "width": 1200,
-    "height": 630,
-    "src": "/images/projects/suminagashi/studio-sumi-concept-1200.webp",
-    "srcSet": "/images/projects/suminagashi/studio-sumi-concept-640.webp 640w, /images/projects/suminagashi/studio-sumi-concept-1080.webp 1080w, /images/projects/suminagashi/studio-sumi-concept-1200.webp 1200w",
-    "blur": "data:image/webp;base64,UklGRkIAAABXRUJQVlA4IDYAAADQAQCdASoQAAgAA4BaJYwCdAD2PB8+AAD+7/N5q5NBvjkRX56gi28UyQgbf0++DtIgtZjwAAA="
-  },
   "projects/suminagashi/suminagashi-ink-desktop": {
     "width": 1440,
     "height": 900,
     "src": "/images/projects/suminagashi/suminagashi-ink-desktop-1440.webp",
     "srcSet": "/images/projects/suminagashi/suminagashi-ink-desktop-640.webp 640w, /images/projects/suminagashi/suminagashi-ink-desktop-1080.webp 1080w, /images/projects/suminagashi/suminagashi-ink-desktop-1440.webp 1440w",
     "blur": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAABQAgCdASoQAAoAA4BaJZQCdAEYG+evKpZGd2AA/vTlCO5qARbvo499dyoCbWVa3Q0r9h9eK6+ITWZIrggsIru9xdYbwGTMhdsK+OfgP2fVJ9XQHhjyBHGylRUAAA=="
-  },
-  "projects/suminagashi/suminagashi-ink-detail": {
-    "width": 1440,
-    "height": 900,
-    "src": "/images/projects/suminagashi/suminagashi-ink-detail-1440.webp",
-    "srcSet": "/images/projects/suminagashi/suminagashi-ink-detail-640.webp 640w, /images/projects/suminagashi/suminagashi-ink-detail-1080.webp 1080w, /images/projects/suminagashi/suminagashi-ink-detail-1440.webp 1440w",
-    "blur": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwAgCdASoQAAoAA4BaJYgCdAED+FSWcVos4AD+88iYUhqhDI0SNzXwb/m7WN2IbuAiqY6bexg/m+ntlIIoo8EvF9MXr/plV/aeWUT4EU6WNHSrjjN/8oAA"
   }
 }

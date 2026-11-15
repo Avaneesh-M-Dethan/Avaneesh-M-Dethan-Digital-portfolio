@@ -20,23 +20,6 @@ export type LinkItem = {
   requiresFile?: boolean;
 };
 
-export type Fact = { label: string; value: string };
-
-/** A named item inside a section: SOAPS letters, devices, steps, figures. */
-export type Item = { label: string; title?: string; body?: string; tag?: string };
-
-export type Block = {
-  heading: string;
-  body?: string[];
-  points?: string[];
-  items?: Item[];
-  /** How items render: a grid of cards, a numbered sequence, or big figures. */
-  itemStyle?: 'grid' | 'sequence' | 'figures';
-  quote?: { text: string; source?: string };
-  /** Set when this block still needs Avaneesh's input. Hidden in production. */
-  todo?: string;
-};
-
 export type Status = { label: string; tone: 'live' | 'ongoing' | 'done' | 'experiment' | 'pending' };
 
 export type Project = {
@@ -49,19 +32,18 @@ export type Project = {
   year?: string;
   /** One line, shown on cards and rows. */
   summary: string;
-  role?: string;
   authorship?: 'Individual' | 'Group project';
-  /** "featured" projects get imagery and their own page; "index" projects expand in place. */
+  /** "featured" projects get a large image card; "index" projects are compact rows. */
   tier: 'featured' | 'index';
   cover?: ImageRef;
-  /** Typographic cover for featured work without screenshots. */
-  coverType?: { display: string; caption: string };
-  gallery?: ImageRef[];
+  /** What I did on the project, a few short points. */
+  did: string[];
+  /** What I learnt from it, a few short points. */
+  learnt: string[];
+  /** Where the work lives: Google Drive, a live site or GitHub. */
   links: LinkItem[];
   tools?: string[];
-  facts?: Fact[];
-  sections: Block[];
-  /** A short honesty note shown prominently, e.g. "All figures are simulated." */
+  /** A short honesty note, e.g. "All figures are simulated." */
   note?: string;
   /** Things Avaneesh needs to supply for this project. Listed in CONTENT_NEEDED.md. */
   todo?: string[];
