@@ -69,7 +69,7 @@ export type Project = {
 };
 
 export type Course = {
-  code: 'LLR' | 'DIR' | 'TLM';
+  code: string;
   name: string;
   intro: string;
   projects: Project[];
@@ -77,6 +77,9 @@ export type Course = {
 
 export type TimelineEntry = {
   period?: string;
+  /** Where this entry links: a section anchor (#tmun) or a page (/work/quoin/). */
+  href: string;
+  linkLabel: string;
   title: string;
   place: string;
   body: string;
@@ -93,7 +96,6 @@ export type LeadershipEntry = {
   body: string[];
   themes: string[];
   awards?: { title: string; count: number; note?: string };
-  flow?: { caption: string; steps: { title: string; detail: string; branch?: { title: string; detail: string } }[] };
   photos?: ImageRef[];
   todo?: string[];
 };

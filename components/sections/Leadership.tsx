@@ -27,7 +27,7 @@ export function Leadership() {
 
 function Entry({ entry }: { entry: LeadershipEntry }) {
   return (
-    <li className="relative grid grid-cols-12 gap-x-6 gap-y-6 pb-[clamp(56px,7vw,104px)] pl-10 last:pb-0 md:pl-0">
+    <li id={entry.id} className="relative grid scroll-mt-[calc(var(--nav-h)+24px)] grid-cols-12 gap-x-6 gap-y-6 pb-[clamp(56px,7vw,104px)] pl-10 last:pb-0 md:pl-0">
       <span aria-hidden="true" className="absolute left-[6px] top-3 h-[11px] w-[11px] rounded-full border border-gold bg-charcoal md:left-[calc(25%-17px)]" />
 
       <div className="col-span-12 md:col-span-3 md:pr-10" data-reveal="fade">
@@ -64,8 +64,6 @@ function Entry({ entry }: { entry: LeadershipEntry }) {
           ))}
         </ul>
 
-        {entry.flow ? <Flow flow={entry.flow} /> : null}
-
         {entry.photos?.length ? (
           <div className="mt-10 grid gap-4 sm:grid-cols-2">
             {entry.photos.map((ph) => (
@@ -83,27 +81,3 @@ function Entry({ entry }: { entry: LeadershipEntry }) {
   );
 }
 
-function Flow({ flow }: { flow: NonNullable<LeadershipEntry['flow']> }) {
-  return (
-    <figure className="mt-12 rounded-sm border border-[var(--line)] bg-ink/40 p-5 sm:p-8" data-reveal="fade">
-      <ol className="grid gap-px overflow-hidden bg-[var(--line)] sm:grid-cols-2 xl:grid-cols-4">
-        {flow.steps.map((s, i) => (
-          <li key={s.title} className="flex flex-col gap-4 bg-charcoal p-5">
-            <div className="flex items-baseline gap-3">
-              <span className="mono accent-gold">{String(i + 1).padStart(2, '0')}</span>
-              <span className="display text-[1.45rem] leading-tight">{s.title}</span>
-            </div>
-            <p className="dim text-[0.95rem] leading-relaxed">{s.detail}</p>
-            {s.branch ? (
-              <p className="mt-auto border-t border-dashed border-[var(--line)] pt-4 text-[0.9rem] leading-relaxed">
-                <span className="mono faint block pb-1">If {s.branch.title.toLowerCase()}</span>
-                <span className="dim">{s.branch.detail}</span>
-              </p>
-            ) : null}
-          </li>
-        ))}
-      </ol>
-      <figcaption className="mono faint mt-5">{flow.caption}</figcaption>
-    </figure>
-  );
-}

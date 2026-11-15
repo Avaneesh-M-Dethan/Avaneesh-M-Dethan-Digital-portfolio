@@ -20,19 +20,19 @@ export const projects: Project[] = [
     authorship: 'Individual',
     tier: 'featured',
     cover: {
-      key: 'projects/quoin/quoin-hero-desktop',
-      alt: 'Quoin homepage hero: the headline "Stop the scroll. Start the scale." in white and gold serif type on a near-black background, with two call-to-action buttons.',
+      key: 'projects/quoin/quoin-cover',
+      alt: 'The Quoin website on a laptop browser and a phone: the headline "Stop the scroll. Start the scale." in white and gold serif capitals on black, with a gold "Start your build" button.',
     },
     gallery: [
       {
-        key: 'projects/quoin/quoin-services-desktop',
-        alt: 'Quoin services section listing four disciplines: Meta Ads, Performance Marketing, Website Development and Brand Design, each with a one-line description.',
-        caption: 'Four service lines, one through line.',
+        key: 'projects/quoin/quoin-identity',
+        alt: 'A Quoin page in a browser window with the statement "What we build is not just a brand. It’s your whole identity." set in large white, grey and gold serif capitals.',
+        caption: 'Editorial type carries the brand.',
       },
       {
-        key: 'projects/quoin/quoin-hero-mobile',
-        alt: 'Quoin homepage on a phone, with the headline stacked above two full-width buttons.',
-        caption: 'Designed mobile first.',
+        key: 'projects/quoin/quoin-services',
+        alt: 'The Quoin services page in a browser window, headed "Our services. Built for recall." above the first service cards.',
+        caption: 'Four services, one system.',
       },
     ],
     links: [{ label: 'Visit quoin-tau.vercel.app', href: 'https://quoin-tau.vercel.app' }],
@@ -56,9 +56,9 @@ export const projects: Project[] = [
         heading: 'What I built',
         points: [
           'Positioning and brand identity: black and muted gold, editorial serif type and a premium, plain-spoken voice.',
-          'The website, end to end: Next.js and TypeScript with GSAP motion, service pages, public ad teardowns of well-known brands and written notes.',
-          'Four service lines: Meta Ads, Performance Marketing, Website Development and Brand Design.',
-          'A lead-generation path built around a free ad-account teardown, so the first conversation starts with useful work, not a pitch.',
+          'The website, end to end: Next.js and TypeScript with scroll-driven motion, designed mobile first.',
+          'Four service lines covering brand, conversion-focused websites, paid creative, and media buying with analytics.',
+          'Contact and enquiry flows designed to turn visits into conversations.',
         ],
       },
       {
@@ -67,14 +67,8 @@ export const projects: Project[] = [
           'AI automation, such as lead follow-ups and connected workflows, is a capability I am exploring alongside the studio. It is not a service Quoin sells today.',
         ],
       },
-      {
-        heading: 'What it taught me',
-        body: [
-          'Credibility cannot be borrowed. Early drafts of the site had placeholder case studies; I removed them before launch rather than show proof I did not have. The site now says it plainly: “New studio, no logo wall yet.”',
-        ],
-      },
     ],
-    todo: ['Quoin: review the "What it taught me" lesson and rewrite it in your own words if you like'],
+    todo: ['Quoin: the live site still shows client results and a testimonial; redeploy the current build, then add a lesson in your own words'],
   },
   {
     slug: 'ai-automations',

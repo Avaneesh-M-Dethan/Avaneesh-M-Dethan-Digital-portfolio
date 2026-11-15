@@ -90,16 +90,31 @@ function FolioCard({ project }: { project: Project }) {
 }
 
 function FolioRow({ project }: { project: Project }) {
+  const hasPage = project.sections.length > 0;
   return (
-    <li className="hairline grid grid-cols-1 gap-x-6 gap-y-3 border-t pt-6 md:grid-cols-9" data-reveal="fade">
+    <li className="group hairline relative grid grid-cols-1 gap-x-6 gap-y-3 border-t pt-6 md:grid-cols-9" data-reveal="fade">
       <span className="mono accent-gold pt-1.5 md:col-span-2">{project.index}</span>
       <div className="md:col-span-5">
-        <h4 className="display h4">{project.title}</h4>
+        <h4 className="display h4 transition-colors duration-500 group-hover:text-gold-deep">
+          {hasPage ? (
+            <Link href={"/academic/" + project.slug + "/"} className="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none">
+              {project.title}
+            </Link>
+          ) : (
+            project.title
+          )}
+        </h4>
         <p className="dim mt-2 text-[0.98rem]">{project.summary}</p>
-        <Todo items={project.todo} className="mt-4" />
+        {project.authorship ? <p className="mono faint mt-3">{project.authorship}</p> : null}
+        <Todo items={project.todo} className="relative mt-4" />
       </div>
-      <div className="md:col-span-2 md:text-right">
+      <div className="flex items-start justify-between gap-4 md:col-span-2 md:flex-col md:items-end">
         <Status status={project.status} />
+        {hasPage ? (
+          <span className="mono inline-flex items-center gap-2.5 border-b border-current pb-1 transition-colors duration-500 group-hover:text-gold-deep group-focus-within:text-gold-deep">
+            Case study <Arrow />
+          </span>
+        ) : null}
       </div>
     </li>
   );

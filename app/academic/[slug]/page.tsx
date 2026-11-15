@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { academicProjects } from '@/content/academic';
+import { academicPages } from '@/content/academic';
 import { CaseStudy } from '@/components/case-study/CaseStudy';
 import { getImage } from '@/lib/images';
 
-const featured = academicProjects.filter((p) => p.tier === 'featured');
+const featured = academicPages;
 
 export const dynamicParams = false;
 export function generateStaticParams() {

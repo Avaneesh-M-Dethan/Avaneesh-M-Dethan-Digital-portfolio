@@ -44,7 +44,7 @@ function Items({ block, reveal }: { block: Block; reveal?: string }) {
       <dl className="grid border-l border-t border-[var(--line)] sm:grid-cols-3" data-reveal={reveal}>
         {items.map((it) => (
           <div key={it.label} className="flex flex-col gap-3 border-b border-r border-[var(--line)] bg-[var(--panel)] p-6">
-            <dt className="display text-[clamp(2rem,3.4vw,3rem)] leading-none text-gold">{it.label}</dt>
+            <dt className="display text-[clamp(2rem,3.4vw,3rem)] leading-none text-gold [font-variant-numeric:lining-nums]">{it.label}</dt>
             <dd className="dim text-[0.95rem] leading-snug">{it.body}</dd>
           </div>
         ))}

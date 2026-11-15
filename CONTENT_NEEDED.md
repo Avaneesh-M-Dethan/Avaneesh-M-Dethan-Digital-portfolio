@@ -6,50 +6,54 @@ The site is complete and looks finished without any of this. Every item below is
 
 ---
 
-## 1. Quick facts (5 minutes)
+## 1. Urgent: the live Quoin site
+
+**quoin-tau.vercel.app still shows client results and a testimonial.** The portfolio links there, and it also says Quoin has no clients yet, so a recruiter who clicks through sees a contradiction. The unverified items are:
+
+- "3.4× pipeline velocity" with a quote from a "B2B SaaS cofounder"
+- a "seven figure monthly revenue" case study with "4.2× LTV to CAC" and "₹5.4L monthly revenue"
+
+The current Quoin code on your laptop has already removed all of these. Redeploying it to that Vercel address fixes the problem. Say the word and I'll walk you through it, or do it with your go-ahead.
+
+## 2. Quick facts (5 minutes)
 
 | What | Where it goes | File to edit |
 |---|---|---|
-| Your school's name and years | About → Education timeline | `content/education.ts` |
-| Year you were Blue House Captain | Education timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
-| Start year of your BBA | Education timeline | `content/education.ts` |
+| Your school's name and years | Timeline | `content/education.ts` |
+| Year you were Blue House Captain | Timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
+| TMUN year | Timeline + Leadership | `content/education.ts`, `content/leadership.ts` |
+| Start year of your BBA | Timeline | `content/education.ts` |
 | MUN conferences where you won Best Delegate (names, years) | Leadership → MUN | `content/leadership.ts` |
 | Committees and countries you represented at MUN | Leadership → MUN | `content/leadership.ts` |
-| TMUN edition(s) and year | Leadership → TMUN | `content/leadership.ts` |
-| Confirm the TMUN 2 registration flow was used as shown | Leadership → TMUN | `content/leadership.ts` |
 | Full name of GLC and your role in it (only if you want it shown) | Leadership → Placement committee | `content/leadership.ts` |
 | Your LinkedIn URL | Connect | `content/social.ts` |
 | The final website address, once you have one | SEO and share previews | `content/profile.ts` (`siteUrl`) |
+| The real name of the course behind the Eternal Limited project | Academic → "Accounting" folio | `content/academic.ts` |
 
-## 2. Academic projects
+## 3. Links still missing
 
-| Project | What I need | Why |
-|---|---|---|
-| Rhetorical Analysis | Was it individual or group work? | The site must say which. |
-| Rhetorical Analysis | The deck saved as PDF, named `llr-rhetorical-analysis.pdf`, in `public/files/` | Switches on the "View the deck" button automatically. |
-| Generative AI in Finance | Your individual contribution within Group 3 | Group work is shown, but no personal contribution is claimed until you tell me. |
-| Generative AI in Finance | The deck saved as PDF **without the team-photo slide (slide 3)**, named `tlm-genai-in-finance.pdf`, in `public/files/` | Switches on "View the deck". Removes your classmates' photos. |
-| AI Marketing Automation (Angadi) | How you want your role worded. Currently "Built the working app", based on the repository history. | Accuracy. |
-| Rebranding Falguni Nayar | The presentation, your contribution, group or individual | Currently a one-line row. |
-| Political and Economic Influence on Health in India | The report or deck, research question, findings, your contribution | Currently a one-line row. |
-| AI and Art | The visuals, concept, your contribution | Designed to become a visual-first case study. |
-| The War for AI Chips | The deck or report, research question, findings, your contribution | Currently a one-line row. |
+Every activity links somewhere except these, which have no public home yet.
 
-I searched your Documents, Desktop, Downloads and OneDrive. The four projects in the last rows have no files on this laptop. They may be in Google Drive, Canva or email.
+| Activity | What would work |
+|---|---|
+| AI and Art (DIR) | Add its deck to the Drive folder. It's the only academic deck missing. |
+| Angadi | Upload the course film to Drive, make the repo public, or deploy a demo. |
+| Jarvis | A short screen recording on Drive, or a public GitHub repo. |
+| Registro Watcher | A public GitHub repo (with your credentials removed). |
+| AI Automations | Screenshots or a recording of a workflow, on Drive. |
+| MUN, TMUN, house captain, placement committee | Certificates, event photos or a TMUN page or Instagram link. |
+| Suminagashi live demo | Drag the `dragon web` folder onto https://app.netlify.com/drop. GitHub is already linked. |
 
-## 3. Photographs (optional, but they lift the site)
+## 4. Your part in group projects (optional, but strong)
 
-Only your real, best photos. The site is designed to look complete without them, and nothing is ever replaced with stock imagery.
+Every academic deck credits Working Group 1. The site says "Group project" and claims no individual contribution, except Eternal Limited, where the report itself lists you as presenter of the final sections. If you tell me which part was yours in the others, I'll add it.
 
-- **An editorial portrait** for the hero. Not a passport photo: natural light, a plain background.
-- **MUN and TMUN**: conference photos, certificates, and the stage photo with the organising group (once you confirm its context).
+## 5. Photographs (optional)
+
+Only your real, best photos. The site looks complete without them.
+
+- **An editorial portrait** for the hero. Not a passport photo.
+- **MUN and TMUN**: conference photos and certificates.
 - **Beyond the work**: up to four photos (sports, travel).
 
-**How to add them:** put the files in `assets-src/personal/`, run `npm run images`, then send me the filenames and I'll place them.
-
-## 4. Things to check and approve
-
-- **Quoin, "What it taught me"**: I wrote this from your project history (you removed placeholder case studies before launch). Rewrite it in your own words if you like.
-- **Scale SaaS**: it does not exist on this laptop. It is hidden in `content/projects.ts`. Send screenshots and the features that work, and I'll switch it on.
-- **Suminagashi**: it has no live link yet. Drag the `dragon web` folder onto https://app.netlify.com/drop and send me the link.
-- **Angadi** and **Jarvis**: their repositories are private or local, so they have no public links. If you publish either, send me the link.
+Put them in `assets-src/personal/`, run `npm run images`, and send me the filenames.

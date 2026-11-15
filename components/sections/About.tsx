@@ -1,5 +1,7 @@
 import { about } from '@/content/profile';
-import { education } from '@/content/education';
+import Link from 'next/link';
+import { education, timelineIntro } from '@/content/education';
+import { Arrow } from '@/components/ui/Arrow';
 import { SectionHeader } from '@/components/ui/SectionHeader';
 import { Todo } from '@/components/ui/Todo';
 
@@ -31,25 +33,30 @@ export function About() {
         </div>
       </div>
 
-      {/* Education: a light, paper-toned panel */}
+      {/* Timeline: a light, paper-toned panel. Every entry links to where it is told in full. */}
       <div className="tone-bone on-light relative">
         <div className="shell py-[clamp(72px,10vw,140px)]">
           <div className="flex items-center gap-4">
-            <span className="mono accent-gold">Education</span>
+            <span className="mono accent-gold">{timelineIntro.label}</span>
             <span className="hairline h-px flex-1 border-t" data-reveal="draw" />
-            <span className="mono faint">A short timeline</span>
+            <span className="mono faint">{timelineIntro.note}</span>
           </div>
 
-          <ol className="relative mt-14 grid gap-12 md:grid-cols-3 md:gap-8">
-            <span aria-hidden="true" className="absolute left-[5px] top-2 h-[calc(100%-8px)] w-px bg-[var(--line-light)] md:left-0 md:top-[5px] md:h-px md:w-full" />
-            <span aria-hidden="true" data-reveal="draw" className="absolute left-0 top-[5px] hidden h-px w-full bg-gold-deep md:block" />
+          <ol className="relative mt-14 grid gap-10 lg:grid-cols-5 lg:gap-6">
+            <span aria-hidden="true" className="absolute left-[5px] top-2 h-[calc(100%-8px)] w-px bg-[var(--line-light)] lg:left-0 lg:top-[5px] lg:h-px lg:w-full" />
+            <span aria-hidden="true" data-reveal="draw" className="absolute left-0 top-[5px] hidden h-px w-full bg-gold-deep lg:block" />
             {education.map((e, i) => (
-              <li key={e.title} className="relative pl-8 md:pl-0 md:pt-10" data-reveal="fade">
-                <span aria-hidden="true" className={`absolute left-0 top-1.5 block h-[11px] w-[11px] rounded-full border md:top-0 ${i === education.length - 1 ? 'border-gold-deep bg-gold-deep' : 'border-[var(--color-paper-ink)] bg-bone'}`} />
-                <p className="mono faint">{e.period ?? String(i + 1).padStart(2, '0')}</p>
-                <h3 className="display h4 mt-3">{e.title}</h3>
-                <p className="mono faint mt-2">{e.place}</p>
-                <p className="dim mt-4 max-w-[38ch]">{e.body}</p>
+              <li key={e.title} className="relative pl-8 lg:pl-0 lg:pt-10" data-reveal="fade">
+                <span aria-hidden="true" className={`absolute left-0 top-1.5 block h-[11px] w-[11px] rounded-full border lg:top-0 ${i === education.length - 1 ? 'border-gold-deep bg-gold-deep' : 'border-[var(--color-paper-ink)] bg-bone'}`} />
+                <Link href={e.href} className="group block">
+                  <p className="mono faint">{e.period ?? String(i + 1).padStart(2, '0')}</p>
+                  <h3 className="display h4 mt-3 transition-colors duration-500 group-hover:text-gold-deep">{e.title}</h3>
+                  <p className="mono faint mt-2">{e.place}</p>
+                  <p className="dim mt-4 max-w-[38ch] text-[0.98rem]">{e.body}</p>
+                  <span className="mono mt-5 inline-flex items-center gap-2.5 border-b border-current pb-1 text-gold-deep">
+                    {e.linkLabel} <Arrow />
+                  </span>
+                </Link>
                 <Todo items={e.todo} className="mt-4" />
               </li>
             ))}
